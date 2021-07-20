@@ -1,0 +1,150 @@
+﻿.body-wrapper
+  @apply relative w-full h-auto m-auto shadow-lg bg-white z-10 mb-6
+
+.campaign-create-head
+  @apply w-full flex flex-col p-10
+
+.campaign-create-head-first
+  @apply  w-full h-auto p-2 flex items-center justify-between
+
+  .duplicate-btn
+    @apply float-left py-2 px-5 my-5 mx-2
+
+  .save-btn
+    @apply float-right py-2 px-5 my-5 mx-2 font-bold
+
+  .back-btn
+    @apply float-right py-2 px-5 my-5 mx-2
+
+  .page-title
+    @apply float-left py-2 my-5 mx-2 text-2xl font-bold
+
+.included-row
+  @apply w-full flex justify-start items-center
+
+  .included-row-plan
+    @apply text-xs py-1 px-4 text-xs border rounded border-gray-400
+
+  .included-row-title-section
+    @apply flex w-auto justify-between
+
+    .included-row-plan-title
+      @apply text-xs px-2 break-words cursor-pointer
+      &:hover
+        @apply underline
+
+.section-container
+  @apply flex w-full justify-start py-5 items-start
+
+.warning-header
+  @apply bg-yellow-200 flex text-center
+
+  .warning-child
+    @apply text-red-500 font-bold mx-2 text-center
+
+.asterisk-warning
+  @apply text-red-500 font-bold mx-2
+
+.asterisk-warning-title
+  @apply text-red-800 font-bold
+
+.campaign-create-head-second
+  @apply flex w-full p-2 whitespace-pre-line
+
+.campaign-create-head-third
+  @apply w-full p-5
+
+.default-container-second
+  @apply  flex justify-start my-5 w-full
+
+.tooltip-outer-container
+  @apply flex flex-col p-5 border bg-white shadow rounded-sm w-64
+
+  .tooltip-inner-container
+    @apply flex justify-between pb-2 items-center
+
+    .tooltip-contents
+      @apply flex flex-col py-2
+
+      .tooltip-contents-text
+        @apply px-5 text-sm break-words
+
+.option-container
+  @apply flex w-auto justify-between items-start
+
+.section-title-style
+  @apply font-bold w-48
+
+.section-title-style-2
+  @apply font-bold w-24
+
+.manual-section-containers
+  @apply flex w-full py-2
+
+.foot-container
+  @apply w-full flex justify-between p-12
+
+.delete-btn
+  @apply text-red-600 cursor-pointer
+  &:hover
+    @apply underline
+
+.calendarInputStyle
+  @apply h-full w-full rounded-r-lg px-2 outline-none
+
+.input-style
+  @apply w-1/2 p-2 ml-10 border rounded
+
+.numeric-input
+  @apply px-5 py-1 rounded  w-auto flex border
+
+.numeric-input-inner
+  box-shadow: 0px 0px 0px 0px
+
+@screen lg
+  .body-and-foot-layout
+    @apply w-full flex flex-col justify-between p-12
+
+  .included-plan-container
+    @apply w-full pt-10
+
+  .section-parent-container
+    @apply flex flex-col w-full pt-10
+
+  .warning-header
+    @apply bg-yellow-200 flex text-xs text-center
+
+  .time-segment-container
+    @apply flex w-2/3 justify-between items-center
+
+  .optimization-container
+    @apply flex flex-col w-full pt-10 h-auto text-sm font-bold
+
+  .manual-section
+    @apply flex flex-col w-3/4 p-2 mt-5 ml-10 bg-gray-200 shadow-md
+
+@screen xl
+  .body-and-foot-layout
+    @apply w-full flex flex-row justify-between p-12
+
+  .included-plan-container
+    @apply w-5/6
+
+  .section-parent-container
+    @apply flex flex-col w-5/6
+
+  .time-segment-container
+    @apply flex w-1/3 justify-between items-center
+
+  .optimization-container
+    @apply flex flex-col w-5/6 h-auto text-sm font-bold
+
+  .manual-section
+    @apply flex flex-col w-1/2 p-5 mt-5 ml-0 bg-gray-200 shadow-md
+
+
+.fade-enter-active, .fade-leave-active
+  transition: opacity .2s
+
+.fade-enter, .fade-leave-to
+  opacity: 0

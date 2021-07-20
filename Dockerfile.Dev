@@ -1,0 +1,12 @@
+FROM node:10.16
+
+RUN npm install -g npm
+
+WORKDIR /app
+ADD . /app/
+RUN rm package-lock.json
+
+RUN npm install
+RUN npm run build
+
+ENV HOST 0.0.0.0

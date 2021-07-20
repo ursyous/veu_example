@@ -1,0 +1,137 @@
+{
+  "dataUI": {
+    "component": "div",
+    "properties": {
+      "class": "settings-content"
+    },
+    "subcomponents": [
+      {
+        "component": "div",
+        "properties": {
+          "class": "w-full flex flex-row pb-2 px-1"
+        },
+        "subcomponents": [
+          {
+            "component": "span",
+            "properties": {
+              "class": "font-semibold text-2xl w-3/4",
+              "domProps": {
+                "innerHTML": "t:pages.settings.sections.campaign.subSections.DSI.title"
+              }
+            },
+            "subcomponents": []
+          },
+          {
+            "component": "div",
+            "properties": {
+              "class": "w-1/4 text-right"
+            },
+            "subcomponents": [
+              {
+                "component": "Button",
+                "events": {
+                  "click": "confirmSave"
+                },
+                "properties": {
+                  "class": "btn-solid-secondary"
+                },
+                "subcomponents": [
+                  {
+                    "component": "span",
+                    "properties": {
+                      "class": "align-middle",
+                      "domProps": {
+                        "innerHTML": "t:commons.save"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "hr",
+        "properties": {
+          "class": "w-full border-b border-gray-400 mt-2"
+        },
+        "subcomponents": []
+      },
+      {
+        "component": "i",
+        "properties": {
+          "class": "text-xs text-gray-700",
+          "domProps": {
+            "innerHTML": "t:pages.settings.sections.campaign.subSections.DSI.note"
+          }
+        }
+      },
+      {
+        "component": "div",
+        "properties": {
+          "class": "w-full h-full flex flex-row mb-5"
+        },
+        "subcomponents": [
+          {
+            "component": "div",
+            "properties": {
+              "class": "w-1/4 mt-5"
+            },
+            "subcomponents": [
+              {
+                "component": "ImageUpload",
+                "properties": {
+                  "class": "border border-gray-600 sm:w-full xl:w-9/12 rounded",
+                  "props": {
+                    "assignedSrc": "/logo.png",
+                    "editText": "pages.settings.sections.campaign.subSections.DSI.inputs.image.upload",
+                    "removeText": "pages.settings.sections.campaign.subSections.DSI.inputs.image.remove",
+                    "value": "~selectedImage"
+                  }
+                },
+                "subcomponents": []
+              }
+            ]
+          },
+          {
+            "component": "div",
+            "properties": {
+              "class": "sm:flex-grow ml-5 xl:w-3/4 "
+            },
+            "subcomponents": [
+              {
+                "component": "Textbox",
+                "vmodel": "email",
+                "properties": {
+                  "class": "w-10/12 mt-5",
+                  "props": {
+                    "label": "pages.settings.sections.campaign.subSections.DSI.inputs.email",
+                    "disabled": "~edit"
+                  }
+                }
+              },
+              {
+                "component": "Textbox",
+                "vmodel": "name",
+                "properties": {
+                  "class": "w-10/12 mt-5",
+                  "props": {
+                    "label": "pages.settings.sections.campaign.subSections.DSI.inputs.name",
+                    "disabled": "~edit"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "variables": {
+    "edit": false,
+    "selectedImage": "",
+    "email": "carl@implexi.com.ph",
+    "name": "carl"
+  }
+}

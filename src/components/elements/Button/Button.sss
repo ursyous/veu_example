@@ -1,0 +1,157 @@
+@import '@/assets/sss/primary.sss'
+@import '@/assets/sss/animate.sss'
+
+button[class*="btn"]
+  @apply animated-ease-fast relative justify-center
+
+  &:focus
+    @apply outline-none
+
+.btn
+  &-solid
+    &-primary
+      @apply bg-primary text-white border-primary
+      &:hover
+        @apply bg-secondary
+
+    &-secondary
+      @apply bg-secondary text-white border-secondary
+      &:hover
+        @apply bg-primary
+
+    &-tertiary
+      @apply bg-tertiary text-gray-800 border-tertiary
+      &:hover
+        @apply bg-disabled text-white
+
+    &-success
+      @apply bg-success text-white border-success
+      &:hover
+        @apply opacity-75
+
+    &-warning
+      @apply bg-warning text-black border-warning
+      &:hover
+        @apply opacity-75
+
+    &-danger
+      @apply bg-error text-white border-error
+      &:hover
+        @apply opacity-75
+
+    &-disabled
+      @apply bg-disabled text-gray-800 border-disabled
+      &:hover
+        @apply cursor-default
+
+  &-outline
+    &*
+      @apply bg-transparent
+
+    &-primary
+      @apply text-primary border-primary
+      &:hover
+        @apply btn-solid-primary
+
+    &-secondary
+      @apply text-secondary border-secondary
+      &:hover
+        @apply btn-solid-secondary
+
+    &-tertiary
+      @apply text-tertiary border-tertiary
+      &:hover
+        @apply btn-solid-tertiary
+
+    &-success
+      @apply text-success border-success
+      &:hover
+        @apply btn-solid-success
+
+    &-warning
+      @apply text-warning border-warning
+      &:hover
+        @apply btn-solid-warning
+
+    &-danger
+      @apply text-error border-error
+      &:hover
+        @apply btn-solid-danger
+
+    &-disabled
+      @apply text-disabled border-disabled
+      &:hover
+        @apply cursor-default
+
+.tooltip::after, .tooltip::before
+  @apply bg-black border-0 invisible outline-none absolute 
+  z-index: 2
+
+.tooltip::before
+  content: ''
+  height: 10px
+  width: 10px
+  transform: rotate(45deg)
+  border-color: transparent #000000 #000000 transparent
+
+.tooltip::after
+  @apply text-white break-normal p-2 text-xs rounded-lg
+  content: attr(data-tooltip)
+  min-width: 5em
+  max-width: 100%
+
+.tooltip:hover::before, .tooltip:hover::after
+  @apply visible
+
+// Colors
+.tooltip.primary::after, .tooltip.primary::before
+  @apply bg-primary
+
+.tooltip.secondary::after, .tooltip.secondary::before
+  @apply bg-secondary
+
+.tooltip.tertiary::after, .tooltip.tertiary::before
+  @apply bg-tertiary
+
+.tooltip.success::after, .tooltip.success::before
+  @apply bg-success
+
+.tooltip.warning::after, .tooltip.warning::before
+  @apply bg-warning
+
+
+// Top
+.tooltip[data-tooltip-position='top']::before
+  top: -15px
+
+.tooltip[data-tooltip-position='top']::after
+  bottom: calc(100% + 10px)
+
+// Bottom
+.tooltip[data-tooltip-position='bottom']::before
+  bottom: -15px
+
+.tooltip[data-tooltip-position='bottom']::after
+  top: calc(100% + 10px)
+
+// Left
+.tooltip[data-tooltip-position='left']::before
+  top: 50%
+  right: calc(100% + 10px)
+  transform: translateY(-50%) rotate(45deg)
+
+.tooltip[data-tooltip-position='left']::after
+  top: 50%
+  right: calc(100% + 15px)
+  transform: translateY(-50%)
+
+// Right
+.tooltip[data-tooltip-position='right']::before
+  top: 50%
+  left: calc(100% + 10px)
+  transform: translateY(-50%) rotate(45deg)
+
+.tooltip[data-tooltip-position='right']::after
+  top: 50%
+  left: calc(100% + 15px)
+  transform: translateY(-50%)

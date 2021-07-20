@@ -1,0 +1,50 @@
+﻿@import '@/assets/sss/text.sss'
+
+.modal-header
+  @apply flex justify-between
+
+  .header-container
+    @apply flex items-center
+
+    .header-title
+      @apply max-w-lg break-normal text-lg leading-tight font-medium
+
+.modal-content
+  @apply flex
+
+  .left-panel
+    @apply h-auto w-1/4 bg-gray-200
+
+    .menu-list
+      @apply font-bold cursor-pointer my-10
+
+      li
+        @apply p-4
+
+        &:hover
+          @apply underline
+  
+  .right-panel
+    @apply w-3/4 float-right h-auto p-4
+
+    .page-title-container
+      @apply flex items-center py-2 border-b-2
+
+      .page-title
+        @apply text-sm font-medium
+
+    .list-container
+      @apply p-6
+
+      li
+        @apply py-4 w-full flex
+
+        .item-header
+          @apply pr-4
+          min-width: 10em
+        
+        .item-content
+          @aply max-w-lg pr-4
+
+.modal-footer
+  @apply flex my-2 w-full items-center

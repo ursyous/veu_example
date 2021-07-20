@@ -1,0 +1,50 @@
+﻿.main-container
+    @apply h-auto m-auto mt-20 py-5 px-10 rounded-lg bg-white
+    box-shadow: 0px 0px 20px -15px black
+
+@screen lg
+    .main-container
+        @apply w-1/2
+
+@screen xl
+    .main-container
+        @apply w-1/4
+
+.login-container
+    @apply flex flex-col p-10
+
+.login-title
+    @apply text-center mb-5 font-bold text-4xl
+
+.sub-texts
+    @apply text-sm text-center
+
+.modalTerms.visible
+    @apply block
+
+.modalTerms.hidden
+    @apply hidden
+
+.modalOpts.visible
+    @apply block
+
+.modalOpts.hidden
+    @apply hidden
+
+.modalBody1.visible
+    @apply flex flex-col justify-between
+
+.modalBody1.hidden
+    @apply hidden
+
+.modalBody2
+    @apply flex flex-col justify-start
+    height: 500px
+
+
+.btn-solid-primary.modal, .btn-solid-tertiary.modal
+    @apply w-1/4 my-2 mx-2 p-2 rounded text-lg
+
+p
+    font-size: 15px
+

@@ -1,0 +1,36 @@
+﻿@import '@/assets/sss/primary.sss'
+
+.progress-bar
+  @apply w-full block
+  
+  *
+    transition: width 0.5s ease
+  
+  .bar-loaded, .bar-background
+    @apply relative rounded-lg
+    min-height: 1em
+
+  .bar-text
+    @apply relative font-medium text-sm
+    
+  .bar-loaded
+    @apply overflow-hidden
+    
+    .bar-shine
+      @apply bg-white absolute
+      min-height: 1em
+      min-width: 100px
+      filter: blur(10px)
+      animation: slide 3s linear infinite
+
+  .bar-background
+    @apply bg-gray-400 w-full
+
+@keyframes slide
+  0%
+    transform: translateX(-100%)
+    left: -100%
+  100% 
+    transform: translateX(0%)
+    left: 100%
+  

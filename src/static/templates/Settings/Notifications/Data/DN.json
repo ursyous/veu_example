@@ -1,0 +1,58 @@
+{
+  "data": {
+    "deliveryNotification": {
+      "groupWareNote": [
+        {
+          "options": [
+            {
+              "text": "pages.settings.sections.notifications.subSections.delivery.rows.notificationChannels.subcomponents.groupWareNote.options.15m",
+              "value": "15m"
+            },
+            {
+              "text": "pages.settings.sections.notifications.subSections.delivery.rows.notificationChannels.subcomponents.groupWareNote.options.30m",
+              "value": "30m"
+            },
+            {
+              "text": "pages.settings.sections.notifications.subSections.delivery.rows.notificationChannels.subcomponents.groupWareNote.options.1h",
+              "value": "1h"
+            },
+            {
+              "text": "pages.settings.sections.notifications.subSections.delivery.rows.notificationChannels.subcomponents.groupWareNote.options.2h",
+              "value": "2h"
+            },
+            {
+              "text": "pages.settings.sections.notifications.subSections.delivery.rows.notificationChannels.subcomponents.groupWareNote.options.3h",
+              "value": "3h"
+            }
+          ]
+        }
+      ],
+      "email": [
+        {
+          "options": [
+            {
+              "text": "pages.settings.sections.notifications.subSections.delivery.rows.notificationChannels.subcomponents.groupWareNote.options.15m",
+              "value": "15m"
+            },
+            {
+              "text": "pages.settings.sections.notifications.subSections.delivery.rows.notificationChannels.subcomponents.groupWareNote.options.30m",
+              "value": "30m"
+            },
+            {
+              "text": "pages.settings.sections.notifications.subSections.delivery.rows.notificationChannels.subcomponents.groupWareNote.options.1h",
+              "value": "1h"
+            },
+            {
+              "text": "pages.settings.sections.notifications.subSections.delivery.rows.notificationChannels.subcomponents.groupWareNote.options.2h",
+              "value": "2h"
+            },
+            {
+              "text": "pages.settings.sections.notifications.subSections.delivery.rows.notificationChannels.subcomponents.groupWareNote.options.3h",
+              "value": "3h"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

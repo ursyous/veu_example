@@ -1,0 +1,563 @@
+{
+  "dataUI": {
+    "component": "div",
+    "properties": {
+      "class": "settings-content"
+    },
+    "subcomponents": [
+      {
+        "component": "div",
+        "properties": {
+          "class": "w-full flex flex-row pb-2 px-1"
+        },
+        "subcomponents": [
+          {
+            "component": "span",
+            "properties": {
+              "class": "font-semibold text-2xl w-3/4",
+              "domProps": {
+                "innerHTML": "t:pages.settings.sections.campaign.subSections.defaults.title"
+              }
+            },
+            "subcomponents": []
+          },
+          {
+            "component": "div",
+            "properties": {
+              "class": "w-1/4 text-right"
+            },
+            "subcomponents": [
+              {
+                "component": "Button",
+                "events": {
+                  "click": "confirmSave"
+                },
+                "properties": {
+                  "class": "btn-solid-secondary"
+                },
+                "subcomponents": [
+                  {
+                    "component": "span",
+                    "properties": {
+                      "class": "align-middle",
+                      "domProps": {
+                        "innerHTML": "t:commons.save"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "hr",
+        "properties": {
+          "class": "w-full border-b border-gray-400 mt-2"
+        },
+        "subcomponents": []
+      },
+      {
+        "component": "i",
+        "properties": {
+          "class": "text-xs text-gray-700",
+          "domProps": {
+            "innerHTML": "t:pages.settings.sections.campaign.subSections.defaults.note"
+          }
+        }
+      },
+      {
+        "component": "div",
+        "properties": {
+          "class": "info-block"
+        },
+        "subcomponents": [
+          {
+            "component": "info",
+            "properties": {
+              "class": "my-1 text-right",
+              "props": {
+                "title": "pages.settings.sections.campaign.subSections.defaults.infos.shipping.label"
+              }
+            },
+            "subcomponents": [
+              {
+                "component": "radio",
+                "vmodel": "shipping",
+                "properties": {
+                  "props": {
+                    "label": "pages.settings.sections.campaign.subSections.defaults.infos.shipping.options.repeat",
+                    "name": "shipping-settings",
+                    "optionValue": true
+                  }
+                }
+              },
+              {
+                "component": "radio",
+                "vmodel": "shipping",
+                "properties": {
+                  "class": "ml-10",
+                  "props": {
+                    "label": "pages.settings.sections.campaign.subSections.defaults.infos.shipping.options.immediately",
+                    "name": "shipping-settings",
+                    "optionValue": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "component": "info",
+            "properties": {
+              "class": "my-1 text-right",
+              "props": {
+                "title": "pages.settings.sections.campaign.subSections.defaults.infos.timezone.label"
+              }
+            },
+            "subcomponents": [
+              {
+                "component": "v-select",
+                "properties": {
+                  "style": {
+                    "width": "200px"
+                  },
+                  "props": {
+                    "clearable": false,
+                    "placeholder": "t:pages.settings.sections.campaign.subSections.defaults.infos.timezone.placeHolder",
+                    "options": "t:pages.settings.sections.campaign.subSections.defaults.infos.timezone.options"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "component": "info",
+            "properties": {
+              "class": "my-1 text-right",
+              "props": {
+                "title": "pages.settings.sections.campaign.subSections.defaults.infos.approval.label"
+              }
+            },
+            "subcomponents": [
+              {
+                "component": "radio",
+                "vmodel": "approval",
+                "properties": {
+                  "props": {
+                    "label": "pages.settings.sections.campaign.subSections.defaults.infos.approval.options.automatic",
+                    "name": "approval-settings",
+                    "ellipsis": true,
+                    "optionValue": true
+                  }
+                }
+              },
+              {
+                "component": "radio",
+                "vmodel": "approval",
+                "properties": {
+                  "class": "ml-10 w-1/2",
+                  "props": {
+                    "label": "pages.settings.sections.campaign.subSections.defaults.infos.approval.options.manual",
+                    "name": "approval-settings",
+                    "ellipsis": true,
+                    "optionValue": false
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "component": "info",
+            "properties": {
+              "class": "my-1 text-right",
+              "props": {
+                "title": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.label"
+              }
+            },
+            "subcomponents": [
+              {
+                "component": "div",
+                "properties": {
+                  "class": "flex-col  overflow-hidden"
+                },
+                "subcomponents": [
+                  {
+                    "component": "radio",
+                    "vmodel": "selectedInput",
+                    "properties": {
+                      "class": "w-full",
+                      "props": {
+                        "label": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.options.auto",
+                        "name": "optimization-settings",
+                        "ellipsis": true,
+                        "optionValue": 1
+                      }
+                    }
+                  },
+                  {
+                    "component": "radio",
+                    "vmodel": "selectedInput",
+                    "properties": {
+                      "class": "w-full",
+                      "props": {
+                        "label": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.options.strong",
+                        "name": "optimization-settings",
+                        "ellipsis": true,
+                        "optionValue": 2
+                      }
+                    }
+                  },
+                  {
+                    "component": "radio",
+                    "vmodel": "selectedInput",
+                    "properties": {
+                      "class": "w-full",
+                      "props": {
+                        "label": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.options.manual",
+                        "name": "optimization-settings",
+                        "ellipsis": true,
+                        "optionValue": 3
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "info",
+            "properties": {
+              "props": {
+                "dynamicProps": {
+                  "selectedInput": "~selectedInput"
+                },
+                "conditionalClass": [
+                  {
+                    "name": "hidden",
+                    "reference": "selectedInput",
+                    "operator": "!==",
+                    "value": 3
+                  }
+                ]
+              }
+            },
+            "subcomponents": [
+              {
+                "component": "div",
+                "properties": {
+                  "class": "pb-2 w-full px-10 bg-tertiary"
+                },
+                "subcomponents": [
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.channel.title"
+                      }
+                    },
+                    "subcomponents": [
+                      {
+                        "component": "v-select",
+                        "vmodel": "channelPriority",
+                        "properties": {
+                          "style": {
+                            "width": "200px"
+                          },
+                          "props": {
+                            "clearable": false,
+                            "placeholder": "t:pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.channel.title",
+                            "options": "t:pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.channel.options"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.plan.title"
+                      }
+                    },
+                    "subcomponents": [
+                      {
+                        "component": "v-select",
+                        "vmodel": "planPriority",
+                        "properties": {
+                          "style": {
+                            "width": "200px"
+                          },
+                          "props": {
+                            "clearable": false,
+                            "placeholder": "t:pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.plan.title",
+                            "options": "t:pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.plan.options"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.target.title"
+                      }
+                    },
+                    "subcomponents": [
+                      {
+                        "component": "v-select",
+                        "vmodel": "targetPriority",
+                        "properties": {
+                          "style": {
+                            "width": "200px"
+                          },
+                          "props": {
+                            "clearable": false,
+                            "placeholder": "t:pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.target.title",
+                            "options": "t:pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.target.options"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.succession.title"
+                      }
+                    },
+                    "subcomponents": [
+                      {
+                        "component": "div",
+                        "properties": {
+                          "class": "w-full flex flex-col"
+                        },
+                        "subcomponents": [
+                          {
+                            "component": "div",
+                            "properties": {
+                              "class": "w-full flex flex-row"
+                            },
+                            "subcomponents": [
+                              {
+                                "component": "radio",
+                                "vmodel": "succession",
+                                "properties": {
+                                  "class": "w-1/2",
+                                  "props": {
+                                    "label": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.succession.allowed",
+                                    "name": "succession-settings",
+                                    "ellipsis": true,
+                                    "optionValue": true
+                                  }
+                                }
+                              },
+                              {
+                                "component": "radio",
+                                "vmodel": "succession",
+                                "properties": {
+                                  "class": "w-1/2 pl-10",
+                                  "props": {
+                                    "label": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.succession.prohibit",
+                                    "name": "succession-settings",
+                                    "ellipsis": true,
+                                    "optionValue": false
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "component": "info",
+                            "properties": {},
+                            "subcomponents": [
+                              {
+                                "component": "div",
+                                "properties": {
+                                  "class": "w-full pr-2 bg-tertiary"
+                                },
+                                "subcomponents": [
+                                  {
+                                    "component": "info",
+                                    "properties": {
+                                      "class": "no-wrap ml-10",
+                                      "props": {
+                                        "titleClass": "disable-default overflow-hidden text-left text-sm w-0",
+                                        "dynamicProps": {
+                                          "errorHandling": "~!succession"
+                                        },
+                                        "conditionalClass": [
+                                          {
+                                            "name": "hidden",
+                                            "reference": "errorHandling",
+                                            "operator": "===",
+                                            "value": false
+                                          }
+                                        ]
+                                      }
+                                    },
+                                    "subcomponents": [
+                                      {
+                                        "component": "div",
+                                        "properties": {
+                                          "class": "flex flex-row"
+                                        },
+                                        "subcomponents": [
+                                          {
+                                            "component": "label",
+                                            "properties": {
+                                              "class": "pr-3",
+                                              "domProps": {
+                                                "innerHTML": "t:pages.settings.sections.campaign.subSections.defaults.globalSettings.infos.errorHandling.retry.title"
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "component": "v-select",
+                                            "vmodel": "retries",
+                                            "properties": {
+                                              "class": "bg-white style-chooser w-14",
+                                              "props": {
+                                                "clearable": false,
+                                                "options": [
+                                                  1, 2, 3, 5, 7, 10, 15
+                                                ]
+                                              }
+                                            }
+                                          },
+                                          {
+                                            "component": "label",
+                                            "properties": {
+                                              "class": "pl-3",
+                                              "domProps": {
+                                                "innerHTML": "t:pages.settings.sections.campaign.subSections.defaults.globalSettings.infos.errorHandling.retry.description"
+                                              }
+                                            }
+                                          }
+                                        ]
+                                      }
+                                    ]
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.duplicateChannel.title"
+                      }
+                    },
+                    "subcomponents": [
+                      {
+                        "component": "div",
+                        "properties": {
+                          "class": "w-full flex flex-row"
+                        },
+                        "subcomponents": [
+                          {
+                            "component": "radio",
+                            "vmodel": "duplicateChannel",
+                            "properties": {
+                              "class": "w-1/2",
+                              "props": {
+                                "label": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.duplicateChannel.allowed",
+                                "name": "duplicateChannel-settings",
+                                "ellipsis": true,
+                                "optionValue": true
+                              }
+                            }
+                          },
+                          {
+                            "component": "radio",
+                            "vmodel": "duplicateChannel",
+                            "properties": {
+                              "class": "w-1/2 pl-10",
+                              "props": {
+                                "label": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.duplicateChannel.prohibit",
+                                "name": "duplicateChannel-settings",
+                                "ellipsis": true,
+                                "optionValue": false
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.duplicatePlan.title"
+                      }
+                    },
+                    "subcomponents": [
+                      {
+                        "component": "div",
+                        "properties": {
+                          "class": "w-full flex flex-row"
+                        },
+                        "subcomponents": [
+                          {
+                            "component": "radio",
+                            "vmodel": "duplicatePlan",
+                            "properties": {
+                              "class": "w-1/2",
+                              "props": {
+                                "label": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.duplicatePlan.allowed",
+                                "name": "duplicatePlan-settings",
+                                "ellipsis": true,
+                                "optionValue": true
+                              }
+                            }
+                          },
+                          {
+                            "component": "radio",
+                            "vmodel": "duplicatePlan",
+                            "properties": {
+                              "class": "w-1/2 pl-10",
+                              "props": {
+                                "label": "pages.settings.sections.campaign.subSections.defaults.infos.optimization.manualSettings.duplicatePlan.prohibit",
+                                "name": "duplicatePlan-settings",
+                                "ellipsis": true,
+                                "optionValue": false
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "variables": {
+    "shipping": true,
+    "approval": true,
+    "selectedInput": 1,
+    "channelPriority": 0,
+    "planPriority": 0,
+    "targetPriority": 0,
+    "minimum": 4,
+    "retries": 1,
+    "succession": true,
+    "duplicatePlan": true,
+    "duplicateChannel": true,
+    "personalization": true,
+    "purchaseItem": true,
+    "errorHandling": true
+  }
+}

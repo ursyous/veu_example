@@ -1,0 +1,105 @@
+{
+  "data": {
+    "actionLogs": {
+      "rows": [
+        {
+          "date": "2019.08.01",
+          "ipAddress": "123.45.67.890",
+          "id": "bts_forever1",
+          "action": "login"
+        },
+        {
+          "date": "2019.08.15",
+          "ipAddress": "123.45.67.890",
+          "id": "bts_forever1",
+          "action": "campaign create"
+        },
+        {
+          "date": "2019.08.30",
+          "ipAddress": "123.45.67.890",
+          "id": "bts_forever1",
+          "action": "campaign edit"
+        },
+        {
+          "date": "2019.08.01",
+          "ipAddress": "123.45.67.890",
+          "id": "bts_forever1",
+          "action": "campaign edit"
+        },
+        {
+          "date": "2019.09.11",
+          "ipAddress": "123.45.67.890",
+          "id": "bts_forever2",
+          "action": "campaign edit"
+        },
+        {
+          "date": "2019.09.21",
+          "ipAddress": "123.45.67.890",
+          "id": "bts_forever2",
+          "action": "campaign edit"
+        },
+        {
+          "date": "2019.09.27",
+          "ipAddress": "123.45.67.890",
+          "id": "bts_forever2",
+          "action": "campaign edit"
+        },
+        {
+          "date": "2019.10.01",
+          "ipAddress": "123.45.67.890",
+          "id": "bts_forever3",
+          "action": "campaign edit"
+        },
+        {
+          "date": "2019.10.13",
+          "ipAddress": "123.45.67.890",
+          "id": "bts_forever3",
+          "action": "campaign edit"
+        },
+        {
+          "date": "2019.11.06",
+          "ipAddress": "123.45.67.890",
+          "id": "bts_forever3",
+          "action": "campaign edit"
+        },
+        {
+          "date": "2019.11.08",
+          "ipAddress": "123.45.67.194",
+          "id": "bts_forever4",
+          "action": "campaign edit"
+        },
+        {
+          "date": "2019.11.07",
+          "ipAddress": "123.45.67.194",
+          "id": "bts_forever4",
+          "action": "campaign create"
+        },
+        {
+          "date": "2019.11.09",
+          "ipAddress": "123.45.67.194",
+          "id": "bts_forever4",
+          "action": "disabled campaign"
+        },
+        {
+          "date": "2019.11.11",
+          "ipAddress": "123.45.67.194",
+          "id": "bts_forever4",
+          "action": "campaign edit"
+        },
+        {
+          "date": "2019.11.11",
+          "ipAddress": "123.45.67.194",
+          "id": "bts_forever4",
+          "action": "campaign edit"
+        },
+        {
+          "date": "2019.11.11",
+          "ipAddress": "123.45.67.194",
+          "id": "bts_forever4",
+          "action": "campaign edit"
+        }
+      ],
+      "users": ["bts_forever1", "bts_forever2", "bts_forever3", "bts_forever4"]
+    }
+  }
+}

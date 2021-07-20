@@ -1,0 +1,946 @@
+{
+  "service": {
+    "name": "Business Intelligence Targeting System"
+  },
+  "api": {
+    "error": {
+      "server": "Occur internal server error.",
+      "badRequest": "Bad request.",
+      "auth": "Need to login."
+    }
+  },
+  "layouts": {
+    "header": {
+      "locale": {
+        "ko": "Korean",
+        "en": "English"
+      },
+      "profile": {
+        "settings": "Settings",
+        "help": "Help",
+        "logout": "Logout"
+      }
+    },
+    "leftPanel": {
+      "mainMenu": {
+        "dashboard": "Dashboard",
+        "accounts": "Accounts",
+        "campaigns": "Campaigns",
+        "deliveryHistory" : "Delivery History",
+        "report": "Reports",
+        "template": "Template"
+      },
+      "moreMenu": {
+        "settings": "Settings",
+        "help": "Help"
+      }
+    },
+    "footer": {
+      "index": "Hello BI BTS Web Application",
+      "copyright": "© 2019 Cafe24 BTS",
+      "terms": "Terms of Use",
+      "privacy": "Privacy Policy"
+    }
+  },
+  "pages": {
+    "main": {
+      "subtitle": "With BTS \n send your message to the targets you want, quickly and easily.",
+      "infomsgs": {
+        "info1": "Easily check the best mall members (targets) \n automatically calculated. \n AI algorithms also suggest highly efficient \n products and content.",
+        "info2": "Just set the rules that fit your business once \n and receive new marketing messages every day, \n to the people you want, when you want.",
+        "info3": "Automatically analyze message delivery \n results and provide reports visualized in stunning graphs. \n In addition, based on these analyzes, the algorithms are enhanced \n to find more optimal targets."
+      },
+      "actionmsg": "All features are available for free \n with no additional charge except for the cost of sending a message",
+      "actionbtn": "Get started now",
+      "cases": {
+        "case1": "Case 1. EC Admin logged in (first access)",
+        "case2": "Case 2. No EC login information"
+      },
+      "modal" : {
+        "title1" : "Terms of Use",
+        "title2" : "Check shopping mall information",
+        "termsofservice": "BTS Terms of Service \n \n Content \n Content",
+        "privacypolicy": "Privacy Policy \n \n My \n Content",
+        "buttonSets": {
+          "set1" : {
+            "btnCancel": "Cancel",
+            "btnAgree": "I agree"
+          },
+          "set2": {
+            "btnBack": "Back",
+            "btnStart": "Start"
+          }
+        },
+        "connectedMallsInfo": "The shopping malls connected to the BST are:",
+        "categoryInfo": "What category of merchandise does your shopping mall currently handle most?",
+        "category1":  [ "Select", "Clothing Store", "Household goods", "Food / health", "Fashion miscellaneous goods", "Leisure / Hobbies", "Cosmetics / Beauty", "Furniture / Interior", "Home Appliances / Electronics", "Other", "Book / Stationery / Fancy" ],
+        "category2": [ "Select", "Women's Clothing", "Men's Clothing", "General Clothing", "Child / Baby Clothing", "Other Apparel", "Special Clothing", "Group Clothing" ]
+      }
+    },
+    "DeliveryHistory" : {
+      "title" : "Delivery History",
+      "via" : {
+        "title" : "Via",
+        "email" : "Email",
+        "sms" : "SMS",
+        "push" : "Push",
+        "kakaotalk" : "KakaoTalk"
+      },
+      "status" : {
+        "title" : "Status",
+        "completed" : "Completed",
+        "failure" : "Failure"
+      },
+      "date" : {
+        "title": "Date",
+        "placeholders": {
+          "start": "Start",
+          "end": "End"
+        }
+      },
+      "modal" : {
+        "closebtn" : "Cancel",
+        "editbtn" : "Edit Campaign",
+        "deletebtn": {
+          "button": "Delete this Campaign",
+          "title": "Delete?",
+          "subtitle": "Do you really want to delete this? You cannot revert the changes afterwards."
+        },
+        "viewmore": "view more",
+        "recentdelivery" : {
+          "menutitle" : "Recent Delivery History",
+          "viewMore" : "View more",
+          "title" : "Recent Delivery History"
+        },
+        "plans" : {
+          "menutitle" : "Included Plans",
+          "title" : "Included Plans"
+        },
+        "budgetschedule" : {
+          "title" : "Budget and Schedule",
+          "menutitle" : "Budget and Schedule",
+          "dailybudget" : "Daily Budget",
+          "deliverytype" : "Delivery Type",
+          "startday" : "Start Day",
+          "endday" : "End Day",
+          "timesegment" : "Time Segment"
+        },
+        "optimization" : {
+          "title" : "Optimization",
+          "menutitle" : "Optimization",
+          "channelpriority" : "Channel Priority",
+          "planpriority" : "Plan Priority",
+          "targetpriority" : "Target Priority",
+          "warn1" : "Don't send to the audience who got the message for the last 1 days.",
+          "warn2" : "Audience can receive all messages from multiple plans within this campaign.",
+          "warn3" : "Audience member can receive the same message through multiple channels."
+        }
+      },
+      "tablecolumns" : {
+        "via" : "Via",
+        "datetime" : "Date/Time",
+        "campaignname" : "Campaign Name",
+        "status" : "Status",
+        "sent" : "Sent",
+        "received" : "Received",
+        "amountspent" : "Amount Spent",
+        "clickrate" : "Click Rate",
+        "costperclick" : "Cost Per Click",
+        "conversionrate" : "Conversion rate",
+        "costperconversion" : "Cost-per-conversion",
+        "detail" : "Detail",
+        "conversiondays": "Average Purchase Conversion Days"
+      }
+    },
+    "settings": {
+      "title": "Settings",
+      "saveButtonText": "Save",
+      "cancelButtonText": "< Cancel",
+      "backButtonText": "< Settings",
+      "alerts": {
+        "success": {
+          "saveEdit": "Changes Successfully Saved!",
+          "deletePhoto": "Profile photo has been successfully deleted!"
+        },
+        "save": {
+          "title": "Are you sure you want to save it?"
+        },
+        "cancel": {
+          "title": "Are you sure you want to cancel it?",
+          "description": "This cannot be reverted once done!"
+        },
+        "delete": {
+          "title": "Are you sure you want to delete this?",
+          "description": "Any changes you have done will discard."
+        }
+      },
+      "sections": {
+        "accountSettings": {
+          "title": "Account Settings",
+          "buttonText": "Edit >",
+          "subSections": {
+            "user": {
+              "title": "User Account Settings",
+              "rows": {
+                "photo": {
+                  "title": "Photo"
+                },
+                "name": {
+                  "title": "Name"
+                },
+                "id": {
+                  "title": "ID"
+                },
+                "email": {
+                  "title": "Email"
+                },
+                "phone": {
+                  "title": "Phone"
+                }
+              }
+            }
+          }
+        },
+        "notifications": {
+          "title": "Notifications",
+          "buttonText": "Edit >",
+          "subSections": {
+            "delivery": {
+              "title": "Delivery Notifications",
+              "note": "* Your dispatcher will be notified before your campaign message is sent. (Notification will be sent to the email registered in 'Account Information Settings'.)",
+              "rows": {
+                "notification": {
+                  "title": "Whether to receive message notifications"
+                },
+                "notificationChannels": {
+                  "title": "Notification channel and schedule",
+                  "subcomponents": {
+                    "groupWareNote": {
+                      "title": "Groupware Note",
+                      "select": {
+                        "placeholder": "Select a notification schedule.",
+                        "options": [
+                          "15 minutes ago",
+                          "30 minutes ago",
+                          "1 hour before",
+                          "2 hour before",
+                          "3 hour before"
+                        ]
+                      }
+                    },
+                    "email": {
+                      "title": "Email",
+                      "select": {
+                        "placeholder": "Select a notification schedule.",
+                        "options": [
+                          "15 minutes ago",
+                          "30 minutes ago",
+                          "1 hour before",
+                          "2 hour before",
+                          "3 hour before"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "subUser": {
+          "title": "Sub-User Settings",
+          "subSections": {
+            "add": {
+              "title": "Add Sub-User",
+              "note": "* You can add / delete subusers and manage subuser privileges.",
+              "buttons": {
+                "delete": "Delete",
+                "add": "+ Add sub user"
+              },
+              "tableColumnTitles": {
+                "select": "Select",
+                "id": "ID",
+                "name": "Name",
+                "authority": "Authority",
+                "registrationDate": "Registration Date",
+                "lastLoginDate": "Last Login Date"
+              },
+              "modal": {
+                "title": "Add sub user",
+                "rows": {
+                  "name": "Name *",
+                  "id": "ID *",
+                  "password": "Password *",
+                  "authority": "Authority"
+                },
+                "required": "* - Fields are required"
+              },
+              "alerts": {
+                "delete": {
+                  "title": "Are you sure you want to delete these users?",
+                  "description": "This cannot be reverted once done!"
+                }
+              },
+              "options": {
+                "id": "ID",
+                "name": "Name"
+              }
+            },
+            "actionLogs": {
+              "title": "User Action Log",
+              "note": "You can add / delete subusers and manage subuser privileges.",
+              "tableColumnTitles": {
+                "date": "Date",
+                "ip": "IP Address",
+                "id": "ID",
+                "action": "Action"
+              },
+              "filters": {
+                "user": "User ID",
+                "term": "Term",
+                "content": "Content",
+                "placeholders": {
+                  "user":"User ID",
+                  "term": {
+                    "start": "Start",
+                    "end": "End"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "campaign": {
+          "title": "Campaign Settings",
+          "subSections": {
+            "DSI": {
+              "title": "Delivery Sender Info",
+              "note": "* Register the sender information used when sending campaign messages.",
+              "inputs": {
+                "email": "Email",
+                "name": "Name",
+                "image": {
+                  "upload": "Upload",
+                  "remove": "Remove"
+                }
+              }
+            },
+            "defaults": {
+              "title": "Campaign Default Settings",
+              "note": "* Set campaign defaults (defaults to campaign manager when creating new campaigns.)",
+              "infos": {
+                "shipping": {
+                  "label": "Set default shipping type",
+                  "options": {
+                    "repeat": "Repeat",
+                    "immediately": "Immediately"
+                  }
+                },
+                "timezone": {
+                  "label": "Set default time zone",
+                  "placeHolder": "Please select a shipping time zone.",
+                  "options": [
+                    "AM 08:00 ~ AM 11:00",
+                    "AM 11:00 ~ PM 02:00",
+                    "PM 02:00 ~ PM 05:00",
+                    "PM 05:00 ~ PM 08:00"
+                  ]
+                },
+                "approval": {
+                  "label": "Set default value for approval before sending message",
+                  "options": {
+                    "automatic": "No further approval required",
+                    "manual": "Click OK again to confirm your shipment"
+                  }
+                },
+                "optimization": {
+                  "label": "Set campaign optimization defaults",
+                  "options": {
+                    "auto": "Auto setting - We send to the most efficient channel and plan with optimized rate.",
+                    "strong": "Strong promotion - Send a variety of messages for strong appeal across multiple channels.",
+                    "manual": "Manual setting - You can set your own priority."
+                  },
+                  "manualSettings": {
+                    "channel": {
+                      "title": "Channel Priority",
+                      "options": [
+                        "Automatic",
+                        "High response rates",
+                        "High conversion rates",
+                        "Low cost channel",
+                        "..."
+                      ]
+                    },
+                    "plan": {
+                      "title": "Plan Priority",
+                      "options": [
+                        "Automatic",
+                        "High conversion rates plan",
+                        "High conversion low cost plan",
+                        "Few audience plan",
+                        "Many audience plan",
+                        "..."
+                      ]
+                    },
+                    "target": {
+                      "title": "Target Priority",
+                      "options": [
+                        "Automatic",
+                        "Many orders",
+                        "Recently logged in",
+                        "High response",
+                        "..."
+                      ]
+                    },
+                    "succession": {
+                      "title": "Send messages in succession",
+                      "allowed": "Shipping allowed",
+                      "prohibit": "Do not allow"
+                    },
+                    "duplicateChannel": {
+                      "title": "Send a message to a duplicate channel",
+                      "allowed": "Shipping allowed",
+                      "prohibit": "Do not allow"
+                    },
+                    "duplicatePlan": {
+                      "title": "Send duplicate plan",
+                      "allowed": "Shipping allowed",
+                      "prohibit": "Do not allow"
+                    }
+                  }
+                }
+              },
+              "globalSettings": {
+                "note": "* Campaign global settings (settings are common to all campaigns).",
+                "infos": {
+                  "recommended": {
+                    "title": "Enter the minimum number of recommended products",
+                    "description": "(do not send mail if the number is small)"
+                  },
+                  "personalization": {
+                    "title": "Enable recommendation personalization",
+                    "options": {
+                      "used": "Used",
+                      "unused": "I don't want"
+                    },
+                    "purchaseItems": {
+                      "title": "Exclude / Include Purchase Items",
+                      "options": {
+                        "exclude": "Exclude items you've already purchased",
+                        "include": "Send a notification to the operator"
+                      }
+                    }
+                  },
+                  "errorHandling": {
+                    "title": "Retry when sending error occurs",
+                    "options": {
+                      "retry": "Retry Shipment",
+                      "notify": "Include only items that have already been purchased"
+                    },
+                    "retry": {
+                      "title": "ㄴ After sending ",
+                      "description": "messages, stop sending messages"
+                    }
+                  }
+                }
+              }
+            },
+            "timezone": {
+              "title": "Service Timezone Settings",
+              "note": "* Campaign messages are sent according to the time zone reference time",
+              "infos": {
+                "timezone": {
+                  "title": "Time zone",
+                  "value": "(GMT+09:00) Seoul"
+                }
+              }
+            }
+          }
+        },
+        "service": {
+          "title": "Service Info",
+          "subSections": {
+            "version": {
+              "title": "Service Version Info",
+              "infos": {
+                "version": "Service version",
+                "start": "Service start",
+                "end": "Service end"
+              }
+            },
+            "mall": {
+              "title": "Connected Shopping Malls",
+              "note": "* You can check the information of the shopping mall linked with BTS.",
+              "infos": {
+                "mallID": "Mall ID",
+                "mallName": "Mall Name",
+                "mail": "Bulk Mail Remaining"
+              }
+            }
+          }
+        }
+      },
+      "tooltip": {
+        "title": "Settings Tooltip",
+        "descriptions": [
+          "Settings Tooltip"
+        ]
+      }
+    },
+    "login": {
+      "title": "Login",
+      "subtitle1": "You can log in to the cafe24 mall center account.",
+      "subtitle2": "If you are a Cafe24 company user, please log in with a Groupware account.",
+      "passwordplaceholder" : "PASSWORD",
+      "loginbtn": "LOG IN",
+      "forgotpassword": "Forgot your ID or PASSWORD?",
+      "modal": {
+        "title": "Check shopping mall information",
+        "content1": "Please select a shopping mall to connect to BST. \n You can only connect some shopping malls at this time.",
+        "content2": "If you don't have permission, you won't see the mall listing. \n In this case, please contact BTS operations."
+      }
+    },
+    "campaigns": {
+      "title": "Campaigns",
+      "buttons": {
+        "refresh": "Refresh",
+        "create": "Create",
+        "stop": "STOP",
+        "confirm": "CONFIRM",
+        "resume": "RESUME",
+        "view": "View",
+        "cancel": "Cancel",
+        "delivering": "Delivering",
+        "completed": "Completed",
+        "confirmRequired": "Confirm Required",
+        "stopped": "Stopped",
+        "campaign": "Campaign",
+        "plan": "Plan",
+        "editCampaign": "Edit Campaign",
+        "deleteCampaign": "Delete this Campaign",
+        "viewMore": "view more",
+        "close": "Close"
+      },
+      "sections": {
+        "campaignSummary": {
+          "scheduledMessage": {
+            "title": "Scheduled Message",
+            "email": "Email",
+            "sms": "SMS",
+            "push": "Push",
+            "friendTalk": "Kakao FriendTalk"
+          },
+          "possibleMessage": "Possible number of messages",
+          "timeline": "Timeline",
+          "noCampaign": "No Campaign",
+          "charging": "Charging"
+        },
+        "campaignList": {
+          "name": "Name",
+          "status": "Status",
+          "delivery": "Delivery",
+          "audience": "Audience",
+          "budget": "Budget",
+          "amountSpent": "Amount Spent",
+          "ends": "Ends",
+          "deliveryHistory": "Delivery History",
+          "emptyList": "No campaign or plan data yet.",
+          "loadingList": "Loading, please wait for a while..."
+        },
+        "campaignModal": {
+          "title": "Create a campaign or plan",
+          "createCampaign": "Create Campaign",
+          "createPlan": "Create Plan"
+        },
+        "deliveryHistoryModal": {
+          "recentDelivery": {
+            "title": "Recent Delivery History",
+            "deliveryHistoryTable": {
+              "via": "Via",
+              "dateTime": "Date/Time",
+              "status": "Status",
+              "sent": "Sent",
+              "received": "Received"
+            }
+          },
+          "includedPlans": {
+            "title": "Included Plans"
+          },
+          "budgetSchedule": {
+            "title": "Budget & Schedule",
+            "dailyBudget": "Daily Budget",
+            "deliveryType": "Delivery Type",
+            "startDay": "Start Day",
+            "endDay": "End Day",
+            "timeSegment": "Time Segment"
+          },
+          "optimization": {
+            "title": "Optimization",
+            "subtitle": "Manual - You can set your own priorities",
+            "channel": "Channel Priority",
+            "plan": "Plan Priority",
+            "target": "Target Priority",
+            "note1": "Don't send to the audience who got the message for the last 1 days.",
+            "note2": "Audience can receive all messages from multiple plans within this campaign.",
+            "note3": "Audience member can receive the same message through multiple channels."
+          }
+        }
+      },
+      "commons": {
+        "done": "Done",
+        "expected": "Expected"
+      }
+    },
+    "Plan": {
+      "pageHeader": "Plan Manager",
+      "backBtn": "Back",
+      "backMsg": "Are you sure you want to leave?",
+      "duplicateBtn": "Duplicate"
+    },
+    "Reports" : {
+      "title" : "Report",
+      "overviews" : {
+        "title" : "KPI Overviews",
+        "visitors" : "Visitors",
+        "newMembers" : "New Members",
+        "loginMembers" : "Login Members",
+        "pageViews": "Page Views",
+        "tsr" : "Total Sales Revenue"
+      },
+      "performance" : {
+        "title" : "Campaign Performance",
+        "sentMessages" : "Sent Messages",
+        "amountSpent" : "Amount Spent",
+        "sellingProducts": "Selling Products",
+        "conversionRevenue": "Conversion revenue",
+        "roi": "ROI Return On Investment",
+        "openClickRateGraph" : "Message Open Rate / Click Rate",
+        "aveCostPerMessage": "Average cost per message",
+        "aveClickThrough" : "Average clickthrough rate",
+        "aveConversion" : "Average conversion rate"
+      },
+      "topCampaigns" : "TOP Campaigns"
+    },
+    "campaignManager": {
+      "title" : "Campaign Manager",
+      "duplicateBtn": "Duplicate",
+      "backBtn": "< Back",
+      "saveBtn": "Save Changes",
+      "subTitle": "A campaign acts like a folder for multiple plans. \n You can plan and manage shipping plans and budgets on a per campaign basis.",
+      "head": {
+        "title": "Default",
+        "campaignName": "● Campaign Name",
+        "campaignNamePlaceHolder": "Ex) new customer activation campaign",
+        "status": "● Status"
+      },
+      "body1": {
+        "title": "Included Plans",
+        "createPlanBtn": "+ Create Plan",
+        "tableHeaders": {
+          "planName": "Plan Name",
+          "status": "Status",
+          "audience": "Audience",
+          "amountSpent": "Amount Spent"
+        }
+      },
+      "body2": {
+        "title": "Budget & Schedule",
+        "warning1": "Caution!",
+        "warning2": "Modify the budget of a campaign that has already started, based on the remaining time from the edit date",
+        "section1": {
+          "title": "● Budget",
+          "selectPlaceHolder":"Please select one",
+          "budgetOptions": ["Daily Budget", "Lifetime Budget"],
+          "numberPlaceHolder": "Ex) 15000"
+        },
+        "section2": {
+          "titleSpend1": "You'll spend up to ",
+          "titleSpend2": " in the future.",
+          "numberOfMessages": "The number of messages you can send to this budget are:",
+          "tableHeaders": {
+            "channel": "channel",
+            "fee":"fee",
+            "possibleSend": "The number that can be sent"
+          }
+        },
+        "section3": {
+          "title": "● Delivery Type",
+          "option1": "Repeat",
+          "option2": "One-Time",
+          "tooltip": {
+            "title": "Delivery Type",
+            "subtitle1": "Repeat",
+            "content1": "-The message will be sent once per day over the selected start and end dates. \n -This type is suitable for automatically executing repetitive guides and promotions.",
+            "subtitle2": "One-Time",
+            "content2": "-Your message will be sent once on the selected start date. \n -Suitable for short-term event or transmission test."
+          }
+        },
+        "section4": {
+          "startDay": "● Start Day",
+          "endDay": "● End Day"
+        },
+        "section5": {
+          "title": "● Time Segment",
+          "segmentPlaceHolder": "-choose the time segment-",
+          "tooltip": {
+            "title": "Time Segment",
+            "content1": "-Message sending will begin in the \n selected time zone.",
+            "content2": "-Analyzes past shipments and displays [Recommended] \n in the time zone with the best response rate."
+          }
+        },
+        "section6": {
+          "title": "● Notification before sending a message",
+          "option1": "Receive notification emails",
+          "option2": "Do not receive notification",
+          "option1Options":
+          [
+            "15 minutes ago",
+            "30 minutes ago",
+            "1 hour before",
+            "2 hours ago",
+            "3 hours ago"
+          ]
+        },
+        "section7": {
+          "title": "● Approve before sending a message",
+          "option1": "No further approval required",
+          "option2": "Click OK again to confirm your shipment"
+        }
+      },
+      "foot1": {
+        "title": "Optimization",
+        "option1": "Automatic - Send at optimized rates to the most efficient channels and plans.",
+        "option2": "Strong Promotion - Send a variety of messages for strong appeal across multiple channels.",
+        "option3": "Manual - You can set the priority manually.",
+        "manualMode": {
+          "channelPriority": "● Channel Priority",
+          "channelPriorityOptions": [
+            "Automatic", "High response rates", "High conversion rates", "cost channel"
+          ],
+          "planPriority": "● Plan Priority",
+          "planPriorityOptions": [  "Automatic", "High conversion rates plan", "High conversion low cost plan", "Few audience plan", "Many audience plan"  ],
+          "targetPriority": "● Target Priority",
+          "targetPriorityOptions": ["Automatic", "Many orders", "Recently logged in", "High Response", "..."],
+          "manualOption1": {
+            "title": "● Through messages in a row",
+            "optionA": "Allow shipping",
+            "optionB": "Do not allow"
+            },
+            "manualOption2": {
+            "title": "● There are messages with repeated channels",
+            "optionA": "Allow shipping",
+            "optionB": "Do not allow"
+            },
+            "manualOption3": {
+            "title": "● Through repeated plan",
+            "optionA": "Allow shipping",
+            "optionB": "Do not allow"
+            }
+        }
+      },
+      "foot2":{
+        "deleteBtn": "Delete This Campaign"
+      },
+      "confirms":{
+        "title": "Are you sure you want to leave?",
+        "desc": "Your changes will be lost.",
+        "errorTitle": "Please enter a valid campaign information",
+          "delete": {
+            "title": "Are you sure you want delete this campaign?",
+            "errorTitle": "Something went wrong with deleting"
+          }
+      }
+    },
+    "template": {
+      "title": "Template Management",
+      "items": {
+        "messsageTheme": {
+          "title": "Message Theme",
+          "subTitle1": "Set the theme to be used in the message.",
+          "subTitle2": "These settings are loaded by default when you edit a message in the plan.",
+          "inputLabel": {
+            "logo": "Logo Image",
+            "fontStyle": "Font",
+            "fontSize": "Text Size",
+            "textColor": "Text Color",
+            "buttonBackground": "Button Background Color",
+            "buttonColor": "Button Text Color",
+            "button": {
+              "save": "Save Changes"
+            }
+          }
+        },
+        "footerInformation": {
+          "title": "Footer Information",
+          "subtitle1": "Set the bottom footer area of ​​the message.",
+          "subtitle2": "It contains mandatory requirements when sending advertising messages.",
+          "input": {
+            "label": {
+              "mallName": "Shopping Mall Name (Company Name)",
+              "mallAddress": "Address",
+              "mallContact": "Contact Us",
+              "unsubscribeText": "Unsubscribe Text",
+              "additionalText": "Additional Text",
+              "snsLink": "SNS Link"
+            },
+            "placeholder": {
+              "socialMedia": "Please enter a URL",
+              "mallName": "Ex.) BTS Shopping Mall",
+              "mallAddress": "Ex.) 15, Boramae-ro 5-gil, Dongjak-gu, Seoul",
+              "mallContact": "Ex.) 1588-3413",
+              "unsubscribeText": "Ex.) Unsubscribe"
+            }
+          },
+          "socialMedia": {
+            "instagram": "Instagram",
+            "facebook": "Facebook",
+            "youtube": "Youtube",
+            "blog": "Blog",
+            "kakaoTalkPlusFriend": "PlusFriend",
+            "kakaoStory": "KakaoStory",
+            "band": "Band",
+            "twitter": "Twitter"
+          },
+          "button": {
+            "save": "Save Changes"
+          }
+        },
+        "messageVariables": {
+          "title": "Message Variables",
+          "subTitle": "(Message variable editing function is not provided in the primary)"
+        }
+      }
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "sections": {
+        "gettingStarted": {
+          "title": "Getting Started",
+          "buttons": {
+            "createCampaign": "New Campaign",
+            "createPlan": "New Plan",
+            "editTemplate": "Edit Template",
+            "activeCampaign": "Active Campaign"
+          }
+        },
+        "sentMessages": {
+          "title": "Sent Messages"
+        },
+        "conversionRevenue": {
+          "title": "Conversion Revenue"
+        },
+        "news": {
+          "title": "News",
+          "modal": {
+            "button": {
+              "listView": "List View",
+              "close": "Close"
+            }
+          }
+        },
+        "clickRate": {
+          "title": "Click Rate"
+        },
+        "conversionRate": {
+          "title": "Conversion Rate"
+        },
+        "campaigns": {
+          "title": "Campaigns",
+          "buttons": {
+            "create": "Create New"
+          },
+          "empty": {
+            "statement": "No campaign yet.",
+            "suggestion": "Create one."
+          }
+        },
+        "plans": {
+          "title": "Plans",
+          "buttons": {
+            "create": "Create New"
+          },
+          "empty": {
+            "statement": "No plan yet.",
+            "suggestion": "Create one."
+          }
+        },
+        "support": {
+          "title": "Support",
+          "type": {
+            "video": {
+              "title": "Introduction Video"
+            },
+            "guide": {
+              "title": "User Guide"
+            },
+            "inquiry": {
+              "title": "Leave an inquiry",
+              "question": "Do you have any questions regarding the usage of BTS service?",
+              "suggestion": "If the User Guide doesn't help, you can email the App Development Team",
+              "FAQs": {
+                "title": "Frequently Asked Questions",
+                "FAQ1": "What is a campaign or plan?",
+                "FAQ2": "How do I increase the number of messages remaining?",
+                "FAQ3": "I want to stop a campaign waiting to be sent"
+              },
+              "input": {
+                "name": {
+                  "title": "Name",
+                  "placeholder": "Please input your name."
+                },
+                "email": {
+                  "title": "Email",
+                  "placeholder": "sample.email@domain.com"
+                },
+                "shopAddress": {
+                  "title": "Shopping Mall Address",
+                  "placeholder": "https://www.shoppingmall.com"
+                },
+                "details": {
+                  "title": "Details",
+                  "placeholder": "Please input the details."
+                }
+              }
+            }
+          }
+        },
+        "recentActivity": {
+          "title": "Recent Activity",
+          "activities": {
+            "createCampaign": "Create New Campaign",
+            "deliverCampaign": "Campaign Delivered",
+            "editPlan": "Edit Plan"
+          }
+        }
+      }
+    }
+  },
+  "elements": {
+    "imageUpload": {
+      "uploadText": "Upload",
+      "removeText": "Remove",
+      "removeImage": {
+        "title": "Remove image?",
+        "description": "Remove selected image"
+      }
+    },
+    "VTable": {
+      "searchPlaceholder": "Search",
+      "rowsPerPage": [
+        "10 rows per page",
+        "20 rows per page",
+        "50 rows per page",
+        "100 rows per page"
+      ]
+    },
+    "Modal": {
+      "buttons": {
+        "close": "Close",
+        "save": "Save"
+      }
+    }
+  },
+  "commons": {
+    "save": "Save"
+  }
+}

@@ -1,0 +1,51 @@
+﻿@import '@/assets/sss/layout.sss'
+@import '@/assets/sss/primary.sss'
+@import '@/assets/sss/text.sss'
+
+*
+    transition: all 0.3s ease
+
+.content-container
+    @apply flex
+
+.filter-container
+    min-width: 15em
+
+.datepicker
+    @apply flex items-center w-full border border-gray-500 rounded-lg h-10
+
+    .picker-span
+        @apply h-full w-10 rounded-l-lg outline-none border-none text-center cursor-pointer flex items-center justify-center text-white
+    
+    .picker-input
+        @apply h-full w-full rounded-r-lg px-2 outline-none
+
+@screen sm
+    .line-separator
+        @apply hidden
+        
+    .filter-container
+        @apply pr-0 block
+
+        .page-title
+            @apply mb-2
+    
+        .filter-content
+            @apply shadow p-4 bg-white w-full
+
+            .filter-item
+                @apply w-full block
+
+    .table-container
+        @apply w-full
+
+
+@screen xl
+    .line-separator
+        @apply block
+        
+    .filter-container
+        @apply pr-4 block
+
+        .page-title
+            margin-bottom: 1.75em

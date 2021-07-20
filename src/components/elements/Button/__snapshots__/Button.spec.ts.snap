@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Renders in English correctly 1`] = `
+<button
+  class="btn"
+  data-tooltip=""
+  data-tooltip-position="top"
+  name=""
+>
+  Save
+</button>
+`;
+
+exports[`Button Renders in Korean correctly 1`] = `
+<button
+  class="btn"
+  data-tooltip=""
+  data-tooltip-position="top"
+  name=""
+>
+  저장하기
+</button>
+`;

@@ -1,0 +1,60 @@
+body
+  /* TBD */
+  /* font-family: calibre */
+  font-size: 1rem
+
+.wrapper
+  @apply flex relative
+  flex: 1 0 auto
+
+.content-container
+  @apply w-full py-2 px-1 text-gray-800 bg-gray-200 overflow-auto pb-5 text-sm
+  min-height: 90vh
+  max-height: 92vh
+
+.content-container.main
+  @apply bg-white
+  
+.col-row, .row-col
+  @apply flex
+
+@screen sm
+  .content-container
+    @apply px-2
+
+  .col-row
+    @apply flex-col
+  
+  .row-col
+    @apply flex-row
+
+@screen md
+  .content-container
+    @apply px-3 text-base
+
+@screen lg
+  .content-container
+    @apply px-4 text-base
+
+@screen xl
+  .content-container
+    @apply px-4 text-base
+    
+  .col-row
+    @apply flex-row
+  
+  .row-col
+    @apply flex-col
+
+::-webkit-scrollbar
+  width: 10px
+  height: 6px
+
+::-webkit-scrollbar-track
+  @apply bg-gray-400
+
+::-webkit-scrollbar-thumb
+  @apply rounded-lg bg-gray-700
+
+  &:hover
+    @apply bg-gray-900

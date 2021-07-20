@@ -1,0 +1,30 @@
+@screen sm
+    .info
+
+        &:not(.hidden)
+            @apply flex 
+            
+            &:not(no-wrap)
+                @apply flex-col pl-2
+
+            &.no-wrap
+                @apply flex-row
+
+                .info-title
+                    @apply w-56 !important
+
+    .info-title 
+        @apply overflow-hidden text-left font-semibold w-full pt-3 text-lg
+
+    .info-content
+        @apply flex w-full pt-3
+       
+@screen xl
+    .info:not(.hidden)
+        @apply flex-row py-2 pl-0 !important
+
+    .info-title
+        @apply pt-0 !important w-1/4
+
+    .info-content
+        @apply ml-2 px-2 p-0 flex-grow

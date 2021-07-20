@@ -1,0 +1,316 @@
+@import '@/assets/sss/primary.sss'
+
+@keyframes spin
+  0%
+    transform: rotateZ(0deg)
+  100%
+    transform: rotateZ(360deg)
+
+.spin
+  animation: spin 1s linear infinite
+
+.badge
+  @apply rounded text-xs p-1 select-none text-center text-white border
+  min-width: 6em
+
+  &-outline
+    &-primary
+      @apply border-primary text-primary
+    &-success
+      @apply border-success text-success
+    &-danger
+      @apply border-error text-error
+    &-warning
+      @apply border-warning text-black
+    &-disable
+      @apply border-gray-600 text-gray-600
+
+  &-solid
+    &-primary
+      @apply bg-primary border-primary
+    &-success
+      @apply bg-success border-success
+    &-danger
+      @apply bg-error border-error
+    &-warning
+      @apply bg-warning text-black border-warning
+    &-disable
+      @apply bg-gray-600 border-gray-600
+
+.column-item-container
+  @apply flex items-center
+
+  .item-link
+    @apply text-left
+
+    &:hover
+      @apply underline cursor-pointer
+
+.column-item-container.column-center
+  @apply justify-center w-full
+
+.modal-content
+  @apply flex
+
+  .left-panel
+    @apply h-auto w-1/4 bg-gray-200
+
+    li
+      @apply font-bold cursor-pointer my-10
+
+      &:hover
+        @apply underline
+
+  .right-panel
+    @apply w-3/4 float-right h-auto p-4
+
+    .list-container
+      @apply p-6
+
+      li
+        @apply py-4 w-full flex
+
+        .item-header
+          @apply pr-4
+          min-width: 10em
+
+        .item-content
+          @aply max-w-lg pr-4
+
+.dropdown
+  @apply bg-white absolute border border-gray-600 w-full overflow-auto
+  max-height: 15em
+  top: 100%
+  left: 0
+
+  li
+    @apply text-black p-2 cursor-pointer text-left border-t
+
+    &:hover
+      @apply underline
+
+*
+  transition: all 0.2s ease
+
+@screen lg
+  .campaign-page
+    @apply w-full mb-3
+
+    .campaign-header-container
+      @apply flex items-center
+
+    .campaign-content-container
+      @apply block
+
+      .campaign-content
+        @apply bg-white rounded border my-2 px-2 py-4 z-10
+
+        .content-row-block
+          @apply flex
+
+          .content-row
+            @apply w-full h-full border-b-0
+
+        .content-row
+          @apply block mb-4
+
+          .content-title
+            @apply block mx-2 mb-2 text-lg
+
+          .content-body
+
+            &-block
+              @apply block
+
+              .content-item
+                @apply w-full p-2 justify-between
+
+              .content-item.inline-item
+                @apply mx-2 flex justify-between
+
+            &-flex
+              @apply flex
+
+              .content-item
+                @apply w-full p-2 mx-2 bg-gray-300 text-sm border rounded justify-between
+
+                .inline-item
+                  @apply block flex-col justify-center text-xs text-center
+
+                  .end-label
+                    @apply font-bold cursor-pointer
+
+                    &:hover
+                      @apply underline
+
+            &-inline
+              @apply inline-block
+
+              .content-item
+                @apply w-full p-2 bg-gray-300 text-sm border rounded justify-between
+
+            &-scroll
+              @apply flex mx-2
+
+              .content-item.disabled
+                @apply bg-gray-300 !important
+
+              .content-item.active
+
+                .item-header
+                  @apply border-t-4 border-primary pt-0
+
+              .content-item
+                @apply bg-gray-200 text-sm border-gray-500 border block
+
+                .item-header
+                  @apply py-1 flex justify-center font-medium text-xs border-b border-gray-500
+
+                .item-body
+                  @apply block overflow-auto
+                  max-height: 200px
+
+                  li
+                    @apply px-2 py-4 block border-t border-gray-500
+
+                    .campaign-info
+                      @apply w-full block
+
+                      .campaign-title
+                        @apply font-bold cursor-pointer break-normal
+
+                      .campaign-title:hover
+                        @apply underline
+
+                      .sub-tree
+                        @apply select-none break-normal
+
+                      .sub-tree::before
+                        content: 'ㄴ'
+
+                    .campaign-status
+                      @apply w-full flex justify-between mt-2
+
+                      .badge-container, .option-container
+                        @apply flex justify-between mb-0
+
+                      .option-container > span
+                        @apply cursor-pointer
+
+                  li.empty
+                    @apply p-4 flex justify-center
+
+                    span
+                      @apply text-center select-none text-gray-600 flex items-center font-medium
+
+
+@screen xl
+  .campaign-page
+    @apply w-full
+
+    .campaign-header-container
+      @apply flex items-center
+
+    .campaign-content-container
+      @apply flex
+
+      .campaign-content
+        @apply bg-white rounded border my-2 px-2 py-4
+
+        .content-row-block
+          @apply block
+
+          .content-row
+            @apply w-full border-b-2
+
+        .content-row
+          @apply block mb-4
+
+          .content-title
+            @apply block mx-2 mb-2 text-lg
+
+          .content-body
+
+            &-block
+              @apply block
+
+              .content-item
+                @apply w-full p-2 justify-between
+
+              .content-item.inline-item
+                @apply mx-2 flex justify-between
+
+            &-flex
+              @apply flex
+
+              .content-item
+                @apply w-full p-2 mx-2 bg-gray-300 text-sm border rounded justify-between
+
+                .inline-item
+                  @apply flex flex-row justify-between text-sm text-justify
+
+                  .end-label
+                    @apply font-bold cursor-pointer
+
+                    &:hover
+                      @apply underline
+
+            &-inline
+              @apply inline-block
+
+              .content-item
+                @apply w-full p-2 bg-gray-300 text-sm border rounded justify-between
+
+            &-scroll
+              @apply flex mx-2
+
+              .content-item.disabled
+                @apply bg-gray-300 !important
+
+              .content-item.active
+
+                .item-header
+                  @apply border-t-4 border-primary pt-0
+
+              .content-item
+                @apply bg-gray-200 text-sm border-gray-500 border block
+
+                .item-header
+                  @apply py-1 flex justify-center font-medium text-xs border-b border-gray-500
+
+                .item-body
+                  @apply block overflow-auto
+                  max-height: 200px
+
+                  li
+                    @apply px-2 py-4 flex border-t border-gray-500
+
+                    .campaign-info
+                      @apply w-3/4 flex
+
+                      .campaign-title
+                        @apply font-bold cursor-pointer
+
+                      .campaign-title:hover
+                        @apply underline
+
+                      .sub-tree
+                        @apply select-none break-all
+
+                      .sub-tree::before
+                        content: 'ㄴ'
+
+                    .campaign-status
+                      @apply w-1/4 block mt-0
+
+                      .badge-container, .option-container
+                        @apply flex justify-end mb-1
+
+                      .option-container > span
+                        @apply cursor-pointer
+
+                  li.empty
+                    @apply p-4 flex justify-center
+
+                    span
+                      @apply text-center select-none text-gray-600 flex items-center font-medium

@@ -1,0 +1,71 @@
+@import '@/assets/sss/primary.sss'
+
+.switch
+  @apply relative inline-block align-middle
+  height: 28px
+
+.switch input
+  @apply hidden
+
+.switch label
+  @apply inline-block cursor-pointer
+  margin-left: 70px
+  width: max-content
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+  max-width: 200px
+
+.switch .switch-label
+  user-select: none
+
+.switch.disabled,
+.switch.disabled > label,
+.switch.disabled .slider
+  @apply cursor-not-allowed text-disabled
+
+.slider
+  @apply absolute top-0 left-0 right-0 bottom-0 cursor-pointer
+  background-color: #ccc
+  width: 60px
+  -webkit-transition: .4s
+  transition: .4s
+
+.slider:before
+  @apply absolute bg-white
+  content: ""
+  height: 20px
+  width: 20px
+  left: 5px
+  bottom: 4px
+  -webkit-transition: .4s
+  transition: .4s
+
+.switch input:checked:not([disabled]) ~ .slider
+  @apply bg-gray-700
+
+.switch.primary input:checked:not([disabled]) ~ .slider
+  @apply bg-primary
+
+.switch.success input:checked:not([disabled]) ~ .slider
+  @apply bg-green-500
+
+.switch.warning input:checked:not([disabled]) ~ .slider
+  @apply bg-yellow-600
+
+.switch.danger input:checked:not([disabled]) ~ .slider
+  @apply bg-red-800
+
+input:focus + .slider
+  box-shadow: 0 0 1px rgba(0, 150, 50, 0.75)
+
+input:checked ~ .slider:before
+  -webkit-transform: translateX(30px)
+  -ms-transform: translateX(30px)
+  transform: translateX(30px)
+
+.slider.round
+  border-radius: 34px
+
+.slider.round:before
+  border-radius: 50%

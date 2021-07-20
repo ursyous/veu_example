@@ -1,0 +1,26 @@
+﻿@import '@/assets/sss/primary.sss'
+.tab
+  @apply block
+  min-width: 5em
+.tab *
+  transition: all 0.3s ease
+.tab.active
+  @apply h-full
+.tab-title
+  @apply cursor-pointer p-4 bg-gray-200 text-sm truncate font-normal
+.tab-title.active
+  @apply font-medium
+.tab-content
+  @apply p-8 w-full relative h-full overflow-auto
+.tab.tab-primary .tab-title, .tab.tab-primary .tab-content
+  @apply bg-primary !important
+.tab.tab-primary:hover .tab-title
+  @apply bg-white text-primary border-t border-primary !important
+.tab.tab-secondary
+  @apply bg-blue-400
+.tab.tab-tertiary
+  @apply bg-gray-400
+.tab.tab-warning
+  @apply bg-yellow-400
+.tab.tab-danger
+  @apply bg-red-400

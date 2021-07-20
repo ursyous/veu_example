@@ -1,0 +1,103 @@
+{
+  "dataUI": {
+    "component": "div",
+    "properties": {
+      "class": "settings-content"
+    },
+    "subcomponents": [
+      {
+        "component": "div",
+        "properties": {
+          "class": "w-full flex flex-row pb-2 px-1"
+        },
+        "subcomponents": [
+          {
+            "component": "span",
+            "properties": {
+              "class": "font-semibold text-2xl w-3/4",
+              "domProps": {
+                "innerHTML": "t:pages.settings.sections.service.subSections.mall.title"
+              }
+            },
+            "subcomponents": []
+          },
+          {
+            "component": "div",
+            "properties": {
+              "class": "w-1/4 text-right"
+            },
+            "subcomponents": []
+          }
+        ]
+      },
+      {
+        "component": "hr",
+        "properties": {
+          "class": "w-full border-b border-gray-400 mt-2"
+        },
+        "subcomponents": []
+      },
+      {
+        "component": "i",
+        "properties": {
+          "class": "text-xs text-gray-700",
+          "domProps": {
+            "innerHTML": "t:pages.settings.sections.service.subSections.mall.note"
+          }
+        }
+      },
+      {
+        "component": "div",
+        "data": "mall",
+        "properties": {
+          "class": "w-full h-full flex flex-col mb-2 mt-6"
+        },
+        "subcomponents": [
+          {
+            "component": "info",
+            "properties": {
+              "props": {
+                "title": "pages.settings.sections.service.subSections.mall.infos.mallID",
+                "info": {
+                  "type": "text",
+                  "value": "::mall_id"
+                }
+              }
+            },
+            "subcomponents": []
+          },
+          {
+            "component": "info",
+            "properties": {
+              "props": {
+                "title": "pages.settings.sections.service.subSections.mall.infos.mallName",
+                "info": {
+                  "type": "text",
+                  "value": "::mall_name"
+                }
+              }
+            },
+            "subcomponents": []
+          },
+          {
+            "component": "info",
+            "properties": {
+              "props": {
+                "title": "pages.settings.sections.service.subSections.mall.infos.mail",
+                "info": {
+                  "type": "text",
+                  "value": "::mail_credits"
+                }
+              }
+            },
+            "subcomponents": []
+          }
+        ]
+      }
+    ]
+  },
+  "variables": {
+    "edit": false,
+    "selectedImage": ""
+  }
+}

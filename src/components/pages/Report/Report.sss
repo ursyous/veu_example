@@ -1,0 +1,201 @@
+﻿@import '@/assets/sss/text.sss'
+@import '@/assets/sss/primary.sss'
+
+.negative
+    @apply text-error
+
+.positive
+    @apply text-primary
+
+.date-picker-container
+    @apply bg-white p-1 flex rounded w-full border border-gray-400 shadow
+
+    &:hover > .date-picker
+        @apply flex
+
+    .date-picker
+        @apply bg-white hidden justify-around z-50 rounded absolute right-0 border border-gray-400 shadow
+        top: 100%
+
+        &-container
+            @apply pr-5 w-auto border-0
+        
+        &-input
+            @apply outline-none text-sm font-medium font-mono w-full
+
+            .popover-container
+                width: 200px
+
+                input
+                    @apply w-full text-sm
+
+        &-calendar
+            & > div
+                @apply border-0 !important
+
+        &-presets
+            @apply text-center w-40 my-5 p-2
+
+            li
+                @apply font-medium py-1 border-b border-gray-400 text-sm
+                transition-duration: 0.2s
+
+                &:hover
+                    @apply cursor-pointer bg-blue-400 text-white
+            
+            li:last-of-type
+                @apply border-b-0
+
+@screen sm
+    .head-container
+        @apply w-full flex justify-between
+        
+        .head-dates
+            @apply block h-full w-56 relative
+
+    .overview-container
+        @apply block w-full py-2
+
+        .overview
+            &-title
+                @apply h-full font-bold text-xl mb-4
+            &-content
+                @apply flex justify-between
+
+                .overview-item
+                    @apply block p-2 w-full mx-1 rounded bg-white border border-gray-400 shadow
+
+                    .item
+                        &-title
+                            @apply text-section-title w-full
+                        &-value-container
+                            @apply flex flex-row w-full items-end justify-between
+                            
+                            .item
+                                &-value
+                                    @apply font-bold text-sm break-all text-right
+                                &-status
+                                    @apply font-bold text-sm pl-2 flex items-center
+
+                                    svg
+                                        @apply mx-1
+                    
+                    &:first-child
+                        @apply ml-0
+
+                    &:last-child
+                        @apply mr-0
+
+    .performance-container
+        @apply py-2 w-full
+
+        .performance
+            &-title
+                @apply mb-4
+            &-content
+                @apply block
+
+                .summary-container
+                    @apply w-full flex flex-row bg-white rounded border border-gray-400 shadow p-4 justify-between
+
+                    .summary-item
+                        @apply w-1/5 flex flex-col border-r-2 border-gray-400
+
+                        .item-value
+                            @apply font-bold text-sm text-center px-2
+                            word-break: break-word
+
+                        .item-title
+                            @apply font-normal text-sm text-center
+                    
+                        &:last-child
+                            @apply border-r-0
+                    
+                .stats-container
+                    @apply mt-4 flex flex-col bg-white rounded border border-gray-400 shadow
+                
+                    .stats-chart
+                        @apply w-full p-4
+                    
+                    .stats-desc
+                        @apply w-full h-full flex flex-row bg-gray-200 justify-between
+                        
+                        .stats-item
+                            @apply w-1/3 flex flex-col border-r border-gray-500 p-2
+
+                            .item-title
+                                @apply text-sm font-medium
+                            
+                            .item-values-container
+                                @apply flex flex-row justify-between items-center
+
+                                .item-value
+                                    @apply text-xl font-bold
+                                    word-break: break-word
+
+                                .item-status
+                                    @apply text-base font-bold
+                        
+                            &:last-child
+                                @apply border-r-0
+
+    .report-table-container
+        @apply w-full py-2 block
+
+        .report-table-title
+            @apply block
+        
+        .table-container
+            @apply h-full block
+
+@screen xl
+    .overview-container
+        .overview
+            &-content
+                .overview-item
+                    @apply flex mx-2
+
+                    .item
+                        &-title
+                            @apply w-1/2
+                        &-value-container
+                            @apply flex-col w-1/2
+                            
+                            .item
+                                &-value
+                                    @apply text-xl
+                                &-status
+                                    @apply text-base
+    .performance-container
+        .performance
+            &-content
+                .summary-container
+                    .summary-item
+                        .item-value
+                            @apply text-xl
+
+                        .item-title
+                            @apply text-base
+                
+                .stats-container
+                    @apply flex-row
+                
+                    .stats-chart
+                        @apply w-5/6
+                    
+                    .stats-desc
+                        @apply w-1/6 my-auto flex-col px-4
+                        
+                        .stats-item
+                            @apply w-full border-r-0 border-b border-black py-2
+
+                            .item-title
+                                @apply text-base
+                            
+                            .item-values-container
+
+                                .item-value
+                                    @apply text-2xl
+                        
+                            &:last-child
+                                @apply border-b-0

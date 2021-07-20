@@ -1,0 +1,143 @@
+.planHeader
+  .duplicateBtn
+    background-color: #b0c4de
+
+.createPlan
+  @apply flex items-center
+
+  .input-plan-name
+    @apply shadow bg-gray-100 text-xs outline-none p-1 rounded py-2
+    width: 420px
+
+    &:focus
+      @apply bg-gray-200
+
+  .label
+    @apply pb-2 text-gray-700 font-semibold p-2 text-sm
+
+  .switch
+    min-width : 0
+
+  .plan-campaign
+    @apply rounded p-1
+    max-width: 10rem
+
+.segmentFilters
+  @apply border border-gray-500
+
+  .segmentFilter
+    border-bottom : 1px solid #a0aec0
+
+  .selectedFilters
+    @apply flex items-center justify-center border-dashed border-gray-500 border-1 rounded m-5
+    min-height : 70px
+
+  .selectedCards
+    @apply inline-block text-sm
+
+  .filterOptions
+    @apply inline-block ml-2 mt-2
+
+  .inputNumber
+    /* width : 70% */
+
+  .inputNumberRange
+    width : 20%
+
+  .checkbox
+    input
+      left : 0
+
+    .checkmark
+      height : 20px
+      width : 20px
+
+    .checkmark:after
+      top : 0
+      left : 5px
+      border-width: 0 3px 3px 0
+
+  .radio
+    .check
+      height : 1.2rem
+      width : 1.2rem
+      min-width : 0
+      min-height : 0
+
+    .check:before
+      height: 60%
+      width: 60%
+      top: 55%
+      left: 55%
+
+    input[type=radio]:checked~.check
+      border-width : 2px
+
+  .label
+    @apply m-3 text-blue-500 flex items-center
+
+.planContents
+  @apply relative z-10
+  .tab-content
+    @apply bg-white
+
+  .tab-title
+    @apply text-center p-2  text-gray-500
+
+  .contentsLabel
+    min-width : 15%
+
+  .PlanContentsInput
+    @apply w-full p-2 shadow rounded-lg bg-gray-100 outline-none
+
+.tagsSectionBox
+  @apply w-full border-2 px-2 shadow rounded-lg bg-gray-100 outline-none font-medium
+
+  .connect
+    border-radius : 100px / 80px
+
+.recommendations
+  .contentsTitle
+    width : 75%
+
+  .recommendedProduct
+    width : 50%
+    height : 50%
+    
+    .productImg
+      @apply mx-5 border
+      height: 120px
+      width: 100px
+
+.modalTabs
+  .tab-title-container
+    @apply mt-4
+    min-width : 10em
+
+  .tab-content-container
+    @apply bg-transparent
+
+  .modalLabel
+    @apply m-2
+    min-width : 25%
+
+  .modalLayout
+    @apply m-3
+
+  .productUrl
+    height : 40px
+    width : 60%
+
+  .productUrlParameter
+    height : 40px
+
+.border-1
+  border-width : 1px
+
+.lineHeight30
+  line-height : 30px
+
+.tags
+  @apply shadow-lg rounded-lg mr-3 whitespace-no-wrap text-sm
+  padding : 0.3rem 0.7rem
+  line-height : 40px

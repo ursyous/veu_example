@@ -1,0 +1,86 @@
+@import '@/assets/sss/primary.sss'
+
+.radio
+  @apply relative flex flex-col justify-center h-8
+  max-width: max-content
+  min-width: 100px
+
+.radio input[type=radio]
+  @apply hidden
+
+.radio label
+  @apply flex flex-row w-full cursor-pointer
+  -webkit-transition: all 0.25s linear
+
+.radio label span
+  @apply pl-2 whitespace-no-wrap
+  width: max-content
+  display: inline-block
+
+.radio.ellipsis label span
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+
+.radio .check
+  @apply relative rounded-full h-6 w-6 border border-solid border-gray-700
+  min-width: 24px
+  top: 50%
+  transform: translateY(-50%)
+  min-width: 1.5rem
+  min-height: 1.5rem
+  transition: border .1s linear
+  -webkit-transition: border .1s linear
+
+.radio.disabled .check
+  @apply border-disabled !important
+
+.radio:hover input:not([disabled]) ~ .check
+  @apply border-4
+
+.radio.disabled > label
+  @apply cursor-not-allowed text-disabled
+
+.radio .check::before
+  @apply block absolute rounded-full
+  content: ''
+  height: 70%
+  width: 70%
+  top: 50%
+  left: 50%
+  margin: -35% 0 0 -35%
+  transition: background 0.1s linear
+  -webkit-transition: background 0.1s linear
+
+.radio.disabled input[type=radio]:checked ~ .check::before
+  @apply bg-disabled !important
+
+.radio input[type=radio]:checked ~ .check
+  @apply border-4
+
+.radio input[type=radio]:checked ~ .check::before
+  @apply bg-gray-700
+
+.radio.primary .check
+  @apply border-primary
+
+.radio.primary input[type=radio]:checked ~ .check::before
+  @apply bg-primary
+
+.radio.success .check
+  @apply border-green-500
+
+.radio.success input[type=radio]:checked ~ .check::before
+  @apply bg-green-500
+
+.radio.warning .check
+  @apply border-yellow-600
+
+.radio.warning input[type=radio]:checked ~ .check::before
+  @apply bg-yellow-600
+
+.radio.danger .check
+  @apply border-red-800
+
+.radio.danger input[type=radio]:checked ~ .check::before
+  @apply bg-red-800

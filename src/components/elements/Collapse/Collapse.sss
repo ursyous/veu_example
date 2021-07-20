@@ -1,0 +1,57 @@
+﻿@import '@/assets/sss/primary.sss'
+
+.collapse
+  @apply bg-gray-300 text-white text-lg overflow-hidden z-10 text-black
+  transition: all 0.3s ease-in
+.collapse:hover, .collapse.selected
+  @apply bg-gray-500
+.collapse.disabled
+  @apply cursor-not-allowed
+.collapse.disabled:hover
+  filter: brightness(80%)
+.collapse-primary.disabled
+  @apply cursor-not-allowed bg-primary
+  filter: brightness(80%)
+.collapse-primary.disabled:hover
+  @apply bg-primary text-white border-0
+.collapse-primary
+  @apply bg-primary text-white border-0
+.collapse-primary:hover, .collapse-primary.selected
+  @apply bg-white border-primary border text-primary
+.collapse-trigger
+  @apply text-sm
+.collapse-trigger:hover
+  color: #4c51bf
+.collapse-panel
+  @apply relative bg-gray-200 z-0 p-8 overflow-hidden
+.slideCollapseOut
+  animation: slideCollapse 0.2s ease
+.slideCollapseIn
+  animation: slideCollapse reverse 0.2s ease
+@keyframes slideCollapse
+  0%
+    height: 0px
+    padding-top: 0rem
+    padding-bottom: 0rem
+  100%
+    height: var(--iHeight)
+    padding-top: 2rem
+    padding-bottom: 2rem
+.rotateOut
+  animation: rotateOut 0.2s ease-in forwards
+  transition: all 0.4s ease
+.rotateIn
+  animation: rotateIn 0.2s ease-in forwards
+  transition: all 0.4s ease
+@keyframes rotateIn
+  0%
+    transform: rotateZ(0deg)
+  100%
+    transform: rotateZ(180deg)
+@keyframes rotateOut
+  0%
+    display: none
+    transform: rotateZ(0deg)
+  100%
+    transform: rotateZ(180deg)
+

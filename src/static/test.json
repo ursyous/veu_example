@@ -1,0 +1,293 @@
+{
+  "dataUI": {
+    "component": "div",
+    "properties": {
+      "class": "yow"
+    },
+    "subcomponents": [
+      {
+        "component": "region",
+        "properties": {
+          "props": {
+            "title": "pages.settings.sections.accountSettings.title"
+          }
+        },
+        "data": "users",
+        "subcomponents": [
+          {
+            "component": "info",
+            "properties": {
+              "props": {
+                "title": "Name",
+                "info": {
+                  "type": "text",
+                  "value": "::name"
+                }
+              }
+            },
+            "subcomponents": {
+              "component": "button",
+              "properties": {
+                "props": {}
+              }
+            }
+          },
+          {
+            "component": "info",
+            "properties": {
+              "props": {
+                "title": "Gender",
+                "info": {
+                  "type": "text",
+                  "value": "::gender"
+                }
+              }
+            }
+          },
+          {
+            "component": "info",
+            "properties": {
+              "props": {
+                "title": "Age",
+                "info": {
+                  "type": "text",
+                  "value": "::age"
+                }
+              }
+            }
+          },
+          {
+            "component": "region",
+            "properties": {
+              "props": {
+                "title": "Sibling"
+              }
+            },
+            "data": "siblings",
+            "subcomponents": [
+              {
+                "component": "info",
+                "properties": {
+                  "props": {
+                    "title": "Name",
+                    "info": {
+                      "type": "text",
+                      "value": "::name"
+                    }
+                  }
+                }
+              },
+              {
+                "component": "info",
+                "properties": {
+                  "props": {
+                    "title": "Gender",
+                    "info": {
+                      "type": "text",
+                      "value": "::gender"
+                    }
+                  }
+                }
+              },
+              {
+                "component": "info",
+                "properties": {
+                  "props": {
+                    "title": "Age",
+                    "info": {
+                      "type": "text",
+                      "value": "::age"
+                    }
+                  }
+                }
+              },
+              {
+                "component": "region",
+                "properties": {
+                  "props": {
+                    "title": "Friend"
+                  }
+                },
+                "data": "friends",
+                "subcomponents": [
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "Name",
+                        "info": {
+                          "type": "text",
+                          "value": "::name"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "Gender",
+                        "info": {
+                          "type": "text",
+                          "value": "::gender"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "Age",
+                        "info": {
+                          "type": "text",
+                          "value": "::age"
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "region",
+            "properties": {
+              "class": "eyy",
+              "props": {
+                "title": "Pet"
+              }
+            },
+            "data": "pets",
+            "subcomponents": [
+              {
+                "component": "info",
+                "properties": {
+                  "props": {
+                    "title": "Type",
+                    "info": {
+                      "type": "text",
+                      "value": "::type"
+                    }
+                  }
+                }
+              },
+              {
+                "component": "info",
+                "properties": {
+                  "props": {
+                    "title": "Name",
+                    "info": {
+                      "type": "text",
+                      "value": "::name"
+                    }
+                  }
+                }
+              },
+              {
+                "component": "info",
+                "properties": {
+                  "props": {
+                    "title": "Color",
+                    "info": {
+                      "type": "text",
+                      "value": "::color"
+                    }
+                  }
+                }
+              },
+              {
+                "component": "info",
+                "properties": {
+                  "props": {
+                    "title": "Breed",
+                    "info": {
+                      "type": "text",
+                      "value": "::breed"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "data": {
+    "users": [
+      {
+        "name": "John Doe",
+        "gender": "male",
+        "age": 27,
+        "siblings": [
+          {
+            "name": "Johny Doe",
+            "gender": "male",
+            "age": 19,
+            "friends": []
+          },
+          {
+            "name": "jenna Doe",
+            "gender": "female",
+            "age": 16,
+            "friends": [
+              {
+                "name": "Post Malone",
+                "gender": "male",
+                "age": 24
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "Jane Doe",
+        "gender": "female",
+        "age": 23,
+        "pets": [
+          {
+            "type": "Dog",
+            "name": "Ft.Ludacris",
+            "color": "white",
+            "breed": "Pitbull"
+          }
+        ],
+        "siblings": {
+          "name": "Allan Doe",
+          "gender": "male",
+          "age": 29,
+          "pets": []
+        }
+      },
+      {
+        "name": "asdfg Doe",
+        "gender": "female",
+        "age": 23,
+        "pets": [
+          {
+            "type": "Dog",
+            "name": "Ft.Ludacris",
+            "color": "white",
+            "breed": "Pitbull"
+          }
+        ],
+        "siblings": [
+          {
+            "name": "Allan Doe",
+            "gender": "male",
+            "age": 29,
+            "pets": []
+          },
+          {
+            "name": "Allllllllllllllan Doe",
+            "gender": "male",
+            "age": 29,
+            "pets": []
+          }
+        ]
+      }
+    ]
+  },
+  "variables": {}
+}

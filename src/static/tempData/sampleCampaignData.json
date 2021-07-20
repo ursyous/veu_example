@@ -1,0 +1,413 @@
+﻿{
+  "sampleCampaignList": [
+    {
+      "id": 1,
+      "name": {
+        "type": "Campaign",
+        "name": "Default Campaign"
+      },
+      "Status": true,
+      "Delivery": "Active",
+      "Audience": 2012,
+      "Budget": {
+        "amount": 12100,
+        "currency": "₩",
+        "type": "Daily"
+      },
+      "AmountSpent": {
+        "amount": 3420,
+        "budget": 12100
+      },
+      "Ends": "2019/12/30 5:00 PM",
+      "DeliveryHistory": 1,
+      "children": [
+        {
+          "id": 101,
+          "name": {
+            "type": "Plan",
+            "name": "Test Plan"
+          },
+          "Status": false,
+          "Delivery": "-",
+          "Audience": 5,
+          "Budget": {
+            "amount": null,
+            "currency": null,
+            "type": null
+          },
+          "AmountSpent": {
+            "amount": 20,
+            "budget": 12100
+          },
+          "Ends": "-",
+          "DeliveryHistory": "-"
+        },
+        {
+          "id": 102,
+          "name": {
+            "type": "Plan",
+            "name": "Shopping cart abandonment strategies plan"
+          },
+          "Status": true,
+          "Delivery": "-",
+          "Audience": 2007,
+          "Budget": {
+            "amount": null,
+            "currency": null,
+            "type": null
+          },
+          "AmountSpent": {
+            "amount": 3400,
+            "budget": 12100
+          },
+          "Ends": "-",
+          "DeliveryHistory": "-"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": {
+        "type": "Campaign",
+        "name": "VIP Members Campaign"
+      },
+      "Status": true,
+      "Delivery": "Active",
+      "Audience": 1032,
+      "Budget": {
+        "amount": 20000,
+        "currency": "₩",
+        "type": "Daily"
+      },
+      "AmountSpent": {
+        "amount": 208410,
+        "budget": 20000
+      },
+      "Ends": "2019/10/10 5:00 PM",
+      "DeliveryHistory": 2,
+      "children": [
+        {
+          "id": 201,
+          "name": {
+            "type": "Plan",
+            "name": "Members not purchased within 30 days"
+          },
+          "Status": true,
+          "Delivery": "-",
+          "Audience": 567,
+          "Budget": {
+            "amount": null,
+            "currency": null,
+            "type": null
+          },
+          "AmountSpent": {
+            "amount": 50010,
+            "budget": 20000
+          },
+          "Ends": "-",
+          "DeliveryHistory": "-"
+        },
+        {
+          "id": 202,
+          "name": {
+            "type": "Plan",
+            "name": "Repeat & Top Buyers"
+          },
+          "Status": false,
+          "Delivery": "-",
+          "Audience": 121,
+          "Budget": {
+            "amount": null,
+            "currency": null,
+            "type": null
+          },
+          "AmountSpent": {
+            "amount": 8400,
+            "budget": 20000
+          },
+          "Ends": "-",
+          "DeliveryHistory": "-"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": {
+        "type": "Campaign",
+        "name": "Woman's Campaign Woman's Campaign Woman's..."
+      },
+      "Status": false,
+      "Delivery": "Completed",
+      "Audience": 6423,
+      "Budget": {
+        "amount": 50000,
+        "currency": "₩",
+        "type": "Daily"
+      },
+      "AmountSpent": {
+        "amount": 70280,
+        "budget": 50000
+      },
+      "Ends": "2019/08/05 4:30 PM",
+      "DeliveryHistory": 3,
+      "children": [{
+        "id": 301,
+        "name": {
+          "type": "Plan",
+          "name": "Teenager"
+        },
+        "Status": true,
+        "Delivery": "-",
+        "Audience": 4520,
+        "Budget": {
+          "amount": null,
+          "currency": null,
+          "type": null
+        },
+        "AmountSpent": {
+          "amount": 10200,
+          "budget": 50000
+        },
+        "Ends": "-",
+        "DeliveryHistory": "-"
+      },{
+        "id": 302,
+        "name": {
+          "type": "Plan",
+          "name": "Mother with child"
+        },
+        "Status": false,
+        "Delivery": "-",
+        "Audience": 1903,
+        "Budget": {
+          "amount": null,
+          "currency": null,
+          "type": null
+        },
+        "AmountSpent": {
+          "amount": 60080,
+          "budget": 50000
+        },
+        "Ends": "-",
+        "DeliveryHistory": "-"
+      }]
+    },
+    {
+      "id": 4,
+      "name": {
+        "type": "Campaign",
+        "name": "A/B Test Campaign"
+      },
+      "Status": true,
+      "Delivery": "Recently Completed",
+      "Audience": 344,
+      "Budget": {
+        "amount": 500,
+        "currency": "₩",
+        "type": "Daily"
+      },
+      "AmountSpent": {
+        "amount": 150000,
+        "budget": 500
+      },
+      "Ends": "2019/12/09 05:35 PM",
+      "DeliveryHistory": 4,
+      "children": [{
+        "id": 401,
+        "name": {
+          "type": "Plan",
+          "name": "New Member Promotion A"
+        },
+        "Status": true,
+        "Delivery": "-",
+        "Audience": 10,
+        "Budget": {
+          "amount": null,
+          "currency": null,
+          "type": null
+        },
+        "AmountSpent": {
+          "amount": 12530,
+          "budget": 500
+        },
+        "Ends": "-",
+        "DeliveryHistory": "-"
+      },{
+        "id": 402,
+        "name": {
+          "type": "Plan",
+          "name": "New Member Promotion B"
+        },
+        "Status": true,
+        "Delivery": "-",
+        "Audience": 10,
+        "Budget": {
+          "amount": null,
+          "currency": null,
+          "type": null
+        },
+        "AmountSpent": {
+          "amount": 12530,
+          "budget": 500
+        },
+        "Ends": "-",
+        "DeliveryHistory": "-"
+      }]
+    },
+    {
+      "id": 5,
+      "name": {
+        "type": "Campaign",
+        "name": "Empty Campaign"
+      },
+      "Status": false,
+      "Delivery": "Inactive",
+      "Audience": 0,
+      "Budget": {
+        "amount": 0,
+        "currency": "₩",
+        "type": "Overall"
+      },
+      "AmountSpent": {
+        "amount": 0,
+        "budget": 0
+      },
+      "Ends": "Never Delivered",
+      "DeliveryHistory": 5
+    }
+  ],
+  "sampleCampaignSet": [
+    {
+      "set": 1,
+      "time": "AM 08:00 ~ AM 11:00",
+      "active": false,
+      "campaigns": [
+        {
+          "campaign": {
+            "id": 1,
+            "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+            "status": "Completed"
+          },
+          "plan": [
+            {
+              "id": 101,
+              "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "active": true
+            },
+            {
+              "id": 102,
+              "title": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+              "active": false
+            }
+          ]
+        },
+        {
+          "campaign": {
+            "id": 2,
+            "title": "2019 F/W promotions",
+            "status": "Stopped"
+          },
+          "plan": [
+            {
+              "id": 201,
+              "title": "Include plan 1",
+              "active": true
+            },
+            {
+              "id": 202,
+              "title": "Include plan 2",
+              "active": false
+            }
+          ]
+        },
+        {
+          "campaign": {
+            "id": 3,
+            "title": "Hello customers! It\"s a promotion!",
+            "status": "Delivering"
+          },
+          "plan": [
+            {
+              "id": 301,
+              "title": "Include plan 1",
+              "active": true
+            },
+            {
+              "id": 302,
+              "title": "Include plan 2",
+              "active": true
+            },
+            {
+              "id": 303,
+              "title": "Include plan 3",
+              "active": false
+            },
+            {
+              "id": 304,
+              "title": "Include plan 4",
+              "active": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": 2,
+      "time": "AM 11:00 ~ PM 02:00",
+      "active": true,
+      "campaigns": [
+        {
+          "campaign": {
+            "id": 2,
+            "title": "Hello customers! It\"s a promotion!",
+            "status": "Delivering"
+          },
+          "plan": [
+            {
+              "id": 201,
+              "title": "Include plan 1",
+              "active": true
+            },
+            {
+              "id": 202,
+              "title": "Include plan 2",
+              "active": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "set": 3,
+      "time": "PM 02:00 ~ PM 05:00",
+      "active": null,
+      "campaigns": []
+    },
+    {
+      "set": 4,
+      "time": "PM 05:00 ~ PM 08:00",
+      "active": null,
+      "campaigns": [
+        {
+          "campaign": {
+            "id": 4,
+            "title": "Good bye promotion",
+            "status": "Confirm"
+          },
+          "plan": [
+            {
+              "id": 401,
+              "title": "Include plan 1",
+              "active": true
+            },
+            {
+              "id": 402,
+              "title": "Include plan 2",
+              "active": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

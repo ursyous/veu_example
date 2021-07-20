@@ -1,0 +1,94 @@
+{
+  "dataUI": {
+    "component": "div",
+    "properties": {
+      "class": "settings-content"
+    },
+    "subcomponents": [
+      {
+        "component": "div",
+        "properties": {
+          "class": "w-full flex flex-row pb-2 px-1"
+        },
+        "subcomponents": [
+          {
+            "component": "span",
+            "properties": {
+              "class": "font-semibold text-2xl w-3/4",
+              "domProps": {
+                "innerHTML": "t:pages.settings.sections.service.subSections.version.title"
+              }
+            },
+            "subcomponents": []
+          },
+          {
+            "component": "div",
+            "properties": {
+              "class": "w-1/4 text-right"
+            },
+            "subcomponents": []
+          }
+        ]
+      },
+      {
+        "component": "hr",
+        "properties": {
+          "class": "w-full border-b border-gray-400 mt-2"
+        },
+        "subcomponents": []
+      },
+      {
+        "component": "div",
+        "data": "version",
+        "properties": {
+          "class": "w-full h-full flex flex-col mb-2 mt-6"
+        },
+        "subcomponents": [
+          {
+            "component": "info",
+            "properties": {
+              "props": {
+                "title": "pages.settings.sections.service.subSections.version.infos.version",
+                "info": {
+                  "type": "text",
+                  "value": "::service_version"
+                }
+              }
+            },
+            "subcomponents": []
+          },
+          {
+            "component": "info",
+            "properties": {
+              "props": {
+                "title": "pages.settings.sections.service.subSections.version.infos.start",
+                "info": {
+                  "type": "text",
+                  "value": "::service_start"
+                }
+              }
+            },
+            "subcomponents": []
+          },
+          {
+            "component": "info",
+            "properties": {
+              "props": {
+                "title": "pages.settings.sections.service.subSections.version.infos.end",
+                "info": {
+                  "type": "text",
+                  "value": "::service_end"
+                }
+              }
+            },
+            "subcomponents": []
+          }
+        ]
+      }
+    ]
+  },
+  "variables": {
+    "edit": false,
+    "selectedImage": ""
+  }
+}

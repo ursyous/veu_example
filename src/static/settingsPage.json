@@ -1,0 +1,112 @@
+{
+  "dataUI": {
+    "component": "div",
+    "properties": {
+      "class": "settings-navigation"
+    },
+    "subcomponents": [
+      {
+        "component": "Header",
+        "properties": {
+          "class": "text-gray-700"
+        }
+      },
+      {
+        "component": "hr",
+        "properties": {
+          "class": "w-full mt-8 border-b border-gray-300 mx-auto"
+        },
+        "subcomponents": []
+      },
+      {
+        "component": "NavMenu",
+        "properties": {
+          "class": "mt-8 text-gray-600",
+          "props": {
+            "menus": "::menus"
+          }
+        },
+        "subcomponents": []
+      }
+    ]
+  },
+  "data": {
+    "menus": [
+      {
+        "label": "pages.settings.sections.accountSettings.title",
+        "target": "",
+        "subMenus": [
+          {
+            "label": "pages.settings.sections.accountSettings.subSections.user.title",
+            "target": "/settings/account",
+            "subMenus": []
+          }
+        ]
+      },
+      {
+        "label": "pages.settings.sections.notifications.title",
+        "target": "",
+        "subMenus": [
+          {
+            "label": "pages.settings.sections.notifications.subSections.delivery.title",
+            "target": "/settings/notifications",
+            "subMenus": []
+          }
+        ]
+      },
+      {
+        "label": "pages.settings.sections.subUser.title",
+        "target": "",
+        "subMenus": [
+          {
+            "label": "pages.settings.sections.subUser.subSections.add.title",
+            "target": "/settings/managers",
+            "subMenus": []
+          },
+          {
+            "label": "pages.settings.sections.subUser.subSections.actionLogs.title",
+            "target": "/settings/actions",
+            "subMenus": []
+          }
+        ]
+      },
+      {
+        "label": "pages.settings.sections.campaign.title",
+        "target": "",
+        "subMenus": [
+          {
+            "label": "pages.settings.sections.campaign.subSections.DSI.title",
+            "target": "/settings/sender",
+            "subMenus": []
+          },
+          {
+            "label": "pages.settings.sections.campaign.subSections.defaults.title",
+            "target": "/settings/campaign",
+            "subMenus": []
+          },
+          {
+            "label": "pages.settings.sections.campaign.subSections.timezone.title",
+            "target": "/settings/timezone",
+            "subMenus": []
+          }
+        ]
+      },
+      {
+        "label": "pages.settings.sections.service.title",
+        "target": "",
+        "subMenus": [
+          {
+            "label": "pages.settings.sections.service.subSections.version.title",
+            "target": "/settings/service",
+            "subMenus": []
+          },
+          {
+            "label": "pages.settings.sections.service.subSections.mall.title",
+            "target": "/settings/mall ",
+            "subMenus": []
+          }
+        ]
+      }
+    ]
+  }
+}

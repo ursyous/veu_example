@@ -1,0 +1,69 @@
+{
+  "dataUI": {
+    "component": "div",
+    "properties": {
+      "class": "settings-content"
+    },
+    "subcomponents": [
+      {
+        "component": "div",
+        "properties": {
+          "class": "w-full flex flex-row pb-2 px-1"
+        },
+        "subcomponents": [
+          {
+            "component": "span",
+            "properties": {
+              "class": "font-semibold text-2xl w-3/4",
+              "domProps": {
+                "innerHTML": "t:pages.settings.sections.campaign.subSections.timezone.title"
+              }
+            },
+            "subcomponents": []
+          },
+          {
+            "component": "div",
+            "properties": {
+              "class": "w-1/4 text-right"
+            },
+            "subcomponents": []
+          }
+        ]
+      },
+      {
+        "component": "hr",
+        "properties": {
+          "class": "w-full border-b border-gray-400 mt-2"
+        },
+        "subcomponents": []
+      },
+      {
+        "component": "i",
+        "properties": {
+          "class": "text-xs text-gray-700",
+          "domProps": {
+            "innerHTML": "t:pages.settings.sections.campaign.subSections.timezone.note"
+          }
+        }
+      },
+      {
+        "component": "info",
+        "properties": {
+          "class": " mb-2 mt-2",
+          "props": {
+            "title": "pages.settings.sections.campaign.subSections.timezone.infos.timezone.title",
+            "info": {
+              "type": "text",
+              "value": "pages.settings.sections.campaign.subSections.timezone.infos.timezone.value"
+            }
+          }
+        },
+        "subcomponents": []
+      }
+    ]
+  },
+  "variables": {
+    "edit": false,
+    "selectedImage": ""
+  }
+}

@@ -1,0 +1,21 @@
+.modal-mask
+  @apply fixed z-50 top-0 left-0 w-full h-full table
+  background-color: rgba(0, 0, 0, .5)
+  transition: opacity .3s ease
+
+.modal-wrapper
+  @apply table-cell align-middle
+
+.modal-container
+  @apply .w-1/2 my-0 mx-auto py-5 px-8 bg-white rounded shadow
+  transition: all .3s ease
+  min-width: 640px
+
+.modal-header
+  @apply text-2xl font-semibold border-b border-gray-400 pb-2 mt-0
+
+.modal-content
+  @apply my-5 mx-0
+
+.modal-footer
+  @apply text-sm mb-5 py-5 border-t border-gray-400

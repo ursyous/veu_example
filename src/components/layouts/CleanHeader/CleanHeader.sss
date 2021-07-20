@@ -1,0 +1,39 @@
+﻿@import '@/assets/sss/primary.sss'
+@import '@/assets/sss/animate.sss'
+
+.row
+  @apply flex items-center
+
+.dropdown-list-arrow
+  @apply w-0 h-0 absolute border-solid
+
+nav
+
+  .header
+    @apply row flex-none justify-between px-5 bg-white border-b border-gray-300 py-1 z-30
+    min-width: 800px
+
+    a.navbar-logo
+      @apply row pl-2 animated-rubber-out
+
+      &:hover
+        @apply pl-5 border-l-4 border-secondary
+
+      img
+        @apply inline-block w-12 h-12
+
+      span
+        @apply ml-3 text-lg font-semibold tracking-wide
+
+    .header-nav-bar
+      ul
+        @apply flex
+
+        li
+          @apply row px-5 border-l border-gray-300
+
+          .profile-dropdown
+            @apply absolute bg-white border mt-2 text-sm z-10 w-40
+
+.material-design-icon
+  @apply text-gray-500

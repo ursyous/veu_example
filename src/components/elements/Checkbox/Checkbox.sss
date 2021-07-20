@@ -1,0 +1,94 @@
+@import '@/assets/sss/primary.sss'
+
+.checkbox
+  @apply relative cursor-pointer my-2
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  max-width: max-content
+  min-width: 100px
+
+.checkbox input
+  @apply absolute opacity-0 cursor-pointer
+
+.checkbox.disabled
+  @apply cursor-not-allowed
+
+.checkbox.disabled .checkmark
+  @apply border-disabled !important
+
+.checkbox .checkmark
+  @apply inline-block top-0 left-0 border border-gray-500
+  height: 25px
+  width: 25px
+  transition: background .125s ease-in-out
+
+.checkbox > div
+  @apply inline-block overflow-hidden whitespace-no-wrap pl-3
+  text-overflow: ellipsis
+  max-width: 200px
+  text-overflow: ellipsis
+
+.checkbox.disabled > div
+  @apply text-disabled !important
+
+.checkbox input:checked ~ .checkmark
+  @apply bg-gray-500
+
+.checkbox input:checked:disabled ~ .checkmark
+  @apply bg-disabled !important
+
+.checkbox .checkmark:after
+  @apply hidden
+  content: ""
+
+.checkbox input:checked ~ .checkmark:after
+  @apply block
+
+.checkbox .checkmark:after
+  @apply relative border-solid border-white
+  left: 8px
+  top: 4px
+  width: 8px
+  height: 14px
+  border-width: 0 4px 4px 0
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+
+.checkbox.primary .checkmark
+  @apply border-primary
+
+.checkbox.primary input:checked ~ .checkmark
+  @apply bg-primary
+
+.checkbox.success .checkmark
+  @apply border-green-500
+
+.checkbox.success input:checked ~ .checkmark
+  @apply bg-green-500
+
+.checkbox.primary .checkmark
+  @apply border-primary
+
+.checkbox.primary input:checked ~ .checkmark
+  @apply bg-primary
+
+.checkbox.secondary .checkmark
+  @apply border-secondary
+
+.checkbox.secondary input:checked ~ .checkmark
+  @apply bg-secondary
+
+.checkbox.warning .checkmark
+  @apply border-yellow-600
+
+.checkbox.warning input:checked ~ .checkmark
+  @apply bg-yellow-600
+
+.checkbox.danger .checkmark
+  @apply border-red-800
+
+.checkbox.danger input:checked ~ .checkmark
+  @apply bg-red-800

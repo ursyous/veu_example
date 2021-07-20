@@ -1,0 +1,33 @@
+@import '@/assets/sss/primary.sss'
+
+.file-upload
+  @apply border-solid border-b-4 p-2 border-black bg-gray-600 text-white
+  cursor: pointer
+  border-style: inset
+  min-width: 50px
+
+.file-upload.disabled
+  @apply cursor-not-allowed border-black !important bg-disabled !important
+
+.file-upload > span
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+  max-width: 100%
+  display: inline-block
+  vertical-align: middle
+
+.file-upload.dashed
+  @apply border-dashed !important
+
+.file-upload.primary
+  @apply bg-primary border-blue-800
+
+.file-upload.success
+  @apply bg-green-500 border-green-800
+
+.file-upload.warning
+  @apply bg-yellow-600 border-yellow-800
+
+.file-upload.danger
+  @apply bg-red-600 border-red-800

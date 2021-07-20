@@ -1,0 +1,87 @@
+﻿.main-container
+    @apply w-full h-auto bg-white z-10 relative mb-6
+    display: grid
+    grid-template-areas:
+        'header header header'
+        'body body body'
+        'footer footer footer'
+    grid-gap: 50px
+    padding: 10px
+
+.head-container
+    @apply w-full flex justify-center text-center py-20
+    grid-area: header
+
+.body-container
+    @apply w-full flex justify-center pb-20
+    grid-area: body
+    display: grid
+    grid-template-areas: 'c1 c2 c3'
+    grid-gap: 20px
+
+.foot-container
+    @apply w-full flex justify-center text-center py-20
+    grid-area: footer
+
+.content-1
+    @apply text-center
+    grid-area: c1
+
+.content-2
+    @apply text-center
+    grid-area: c2
+
+.content-3
+    @apply text-center
+    grid-area: c3
+
+@screen lg
+    .content-images-container
+        width: 80%
+        height: 200px
+        margin: 0 auto
+        padding: 20px
+    .titles
+        @apply text-xl font-bold
+    p
+        font-size: 10px
+@screen xl
+    .content-images-container
+        width: 80%
+        height: 350px
+        margin: 0 auto
+        padding: 20px
+    .titles
+        @apply text-3xl font-bold
+    p
+        font-size: 15px
+
+
+.content-images
+    width: 100%
+    height: 100%
+
+.titles.main
+    @apply text-5xl pb-6
+
+
+img
+    @apply pb-5
+
+.btn-solid-primary
+    @apply w-4/5 my-5 py-2 rounded
+
+.btn-solid-tertiary
+    @apply text-sm p-2 my-1 rounded
+
+.btn-solid-primary.modal, .btn-solid-tertiary.modal
+    @apply w-1/4 my-2 mx-2 p-2 rounded
+
+.foot-content-container
+    @apply relative
+
+
+
+.formatText
+    white-space: pre-line
+    text-align: center

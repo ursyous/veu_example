@@ -1,0 +1,125 @@
+@import '@/assets/sss/primary.sss'
+
+.text-input input, .text-input span, .text-input label, .text-input textarea
+  font-family: 'Ubuntu', sans-serif
+  display: block
+  margin: 10px
+  padding: 5px
+  border: none
+  font-size: 22px
+  min-width: 100px
+
+.text-input textarea:focus, .text-input input:focus
+  outline: 0
+
+.text-input .text-box
+  font-size: 1rem
+  font-weight: 300
+  border-radius: 2px
+  margin: 0
+  border: none
+  width: 100%
+  background: rgba(0, 0, 0, 0)
+  transition: padding-top 0.2s ease, margin-top 0.2s ease
+  overflow-x: hidden
+
+.text-input .text-box + label
+  @apply border-gray-500
+  display: block
+  position: relative
+  white-space: nowrap
+  padding: 0
+  margin: 0
+  width: 100%
+  border-width: 1px
+  border-style: solid
+  -webkit-transition: width 0.4s ease
+  transition: width 0.4s ease
+  height: 0px
+
+.text-input .text-box:disabled + label > span
+  @apply text-disabled !important
+
+.text-input .text-box:disabled + label
+  @apply border-disabled !important
+
+.text-input.primary .text-box + label
+  @apply border-primary
+
+.text-input.success .text-box + label
+  @apply border-green-500
+
+.text-input.warning .text-box + label
+  @apply border-yellow-600
+
+.text-input.danger .text-box + label
+  @apply border-red-800
+
+.text-input.danger .text-box + label
+  @apply border-disabled
+
+.active-disabled
+  padding-top: 35px
+
+.textbox-focused
+  top: -4.25rem
+  font-size: 1rem
+  color: #333
+
+.text-input input:focus
+  @apply active-disabled
+.text-input input:valid
+  @apply active-disabled
+.text-input:not(.empty) input:disabled
+  @apply active-disabled
+.text-input:not(.empty) input:read-only
+  @apply active-disabled
+
+.text-input input:disabled
+  @apply cursor-not-allowed
+.text-input input:read-only
+  @apply cursor-not-allowed
+
+.text-input input:focus + label > span
+  @apply textbox-focused
+.text-input input:valid + label > span
+  @apply textbox-focused
+.text-input:not(.empty) input:disabled + label > span
+  @apply textbox-focused
+.text-input:not(.empty) input:read-only + label > span
+  @apply textbox-focused
+
+.text-input input:disabled
+  @apply text-gray-500
+.text-input input:disabled + label > span
+  @apply text-gray-500
+
+.text-input input:valid + label
+  border-color: green
+
+.text-input .text-box:invalid
+  box-shadow: none
+
+.text-input .text-box + label > span
+  @apply cursor-text
+  font-weight: 300
+  margin: 0
+  position: absolute
+  color: #8F8F8F
+  font-size: 1.25rem
+  top: -2.5rem
+  left: 0px
+  pointer-events: none
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease
+
+@-webkit-keyframes appear
+  100%
+    opacity: 1
+
+@keyframes appear
+  100%
+    opacity: 1
+
+.error-message
+  color: firebrick

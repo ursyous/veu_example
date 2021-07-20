@@ -1,0 +1,21 @@
+.campagins
+  #autosuggest
+    #campagin_autosuggest__input
+      @apply relative text-sm px-3 py-2 rounded outline-none
+      @apply max-w-full w-64
+
+    .autosuggest__results-container
+      @apply absolute w-full border shadow
+      top: 42px
+
+      .autosuggest__results-item
+        @apply bg-white
+        &:active, &:hover, &:focus, &.autosuggest__results-item--highlighted
+          @apply bg-gray-100
+
+      .autosuggest-item
+        @apply w-full cursor-pointer text-sm px-3 py-2
+
+        &:not(:last-child)
+          @apply border-b
+

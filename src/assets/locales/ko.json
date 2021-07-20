@@ -1,0 +1,944 @@
+{
+  "service": {
+    "name": "Business Intelligence Targeting System"
+  },
+  "api": {
+    "error": {
+      "server": "서버와 통신중 오류가 발생하였습니다.\n지속발생시 관리자에게 문의바랍니다.",
+      "badRequest": "잘못된 요청입니다.",
+      "auth": "로그인이 필요한 서비스입니다."
+    }
+  },
+  "layouts": {
+    "header": {
+      "locale": {
+        "ko": "한국어",
+        "en": "영어"
+      },
+      "profile": {
+        "settings": "설정",
+        "help": "도움",
+        "logout": "로그 아웃"
+      }
+    },
+    "leftPanel": {
+      "mainMenu": {
+        "dashboard": "대시보드",
+        "accounts": "계정",
+        "campaigns": "캠페인",
+        "deliveryHistory" : "발송로그",
+        "report": "보고서",
+        "template": "템플릿"
+      },
+      "moreMenu": {
+        "settings": "설정",
+        "help": "도움"
+      }
+    },
+    "footer": {
+      "index": "Hello BI BTS Web Application",
+      "copyright": "© 2019 카페24 BTS",
+      "terms": "이용약관",
+      "privacy": "개인정보 보호정책"
+    }
+  },
+  "pages": {
+    "main": {
+    "subtitle": "BTS와 \n 함께 원하는 타겟에게, 쉽고 빠르게 메시지를 전달하세요.",
+    "infomsgs": {
+      "info1": "자동으로 계산 된 최적의\n쇼핑몰 회원(타겟)을 손쉽게 확인해 보세요. \nAI 알고리즘이 높은 효율의 추천 상품과\n컨텐츠도 제안합니다.",
+      "info2": "내 비즈니스에 꼭 맞는 룰을\n한 번만 설정해 놓으면\n원하는 시간대에 원하는 대상에게\n마케팅 메시지를 매일 새롭게 전달합니다",
+      "info3": " 메시지 발송 결과를 자동으로 분석하고\n멋진 그래프로 시각화 한 리포트를 제공합니다.\n또, 이러한 분석 결과를 바탕으로 알고리즘을 강화하여\n더욱 최적의 타겟을 찾아냅니다."
+    },
+    "actionmsg": "  모든 기능은 무료로 사용할 수 있고\n>메시지 발송 비용 외에는 추가 비용이 들지 않습니다",
+    "actionbtn": "지금 시작하기",
+    "cases": {
+      "case1": "Case 1. EC 어드민 로그인 된 상태 (최초 접속)",
+      "case2": "Case 2. EC 로그인 정보 없음"
+    },
+    "modal" : {
+      "title1" : "이용 약관",
+      "title2" : "쇼핑몰 정보 확인",
+      "termsofservice": "BTS 서비스 이용 약관\n\n내용\n내용",
+      "privacypolicy": "개인정보 보호정책\n\n내\n내용",
+      "buttonSets": {
+        "set1" : {
+          "btnCancel": "취소",
+          "btnAgree": "동의한다"
+        },
+        "set2": {
+          "btnBack": "뒤로",
+          "btnStart": "스타트"
+        }
+      },
+      "connectedMallsInfo": "BST에 연결되는 쇼핑몰은 다음과 같습니다.",
+      "categoryInfo": "쇼핑몰에서 현재 가장 많이 취급하는 상품의 카테고리는 어느 것입니까?",
+      "category1":  [ "선택", "의류쇼핑몰", "생활용품", "식품/건강", "패션잡화", "레져/취미용품", "화장품/미용", "가구/인테리어", "가전/전자용품", "기타", "도서/문구/팬시" ],
+      "category2": [ "선택", "여성의류", "남성의류", "종합의류", "아동/유아의류", "기타의류", "특수의류", "단체의류" ]
+    }
+  },
+    "settings": {
+      "title": "설정",
+      "saveButtonText": "저장하기",
+      "cancelButtonText": "< 취소",
+      "backButtonText": "< 설정",
+      "alerts": {
+        "success": {
+          "saveEdit": "변경 사항이 성공적으로 저장되었습니다!",
+          "deletePhoto": "프로필 사진이 성공적으로 삭제되었습니다!"
+        },
+        "save": {
+          "title": "저장 하시겠습니까?"
+        },
+        "cancel": {
+          "title": "취소 하시겠습니까?",
+          "description": "한 번 완료하면 되돌릴 수 없습니다!"
+        },
+        "delete": {
+          "title": "이것을 삭제 하시겠습니까?",
+          "description": "변경 한 내용은 삭제됩니다."
+        }
+      },
+      "sections": {
+        "accountSettings": {
+          "title": "계정 설정",
+          "buttonText": "편집하다 >",
+          "subSections": {
+            "user": {
+              "title": "어카운트 정보 설정",
+              "rows": {
+                "photo": {
+                  "title": "사진"
+                },
+                "name": {
+                  "title": "이름"
+                },
+                "id": {
+                  "title": "신분증"
+                },
+                "email": {
+                  "title": "이메일"
+                },
+                "phone": {
+                  "title": "전화"
+                }
+              }
+            }
+          }
+        },
+        "notifications": {
+          "title": "알림",
+          "buttonText": "편집하다 >",
+          "subSections": {
+            "delivery": {
+              "title": "메시지 발송 알림 설정",
+              "note": "* 캠페인 메시지 발송 전 운영자가 사전에 알림을 받아볼 수 있습니다. (알림은 '어카운트 정보 설정'에 등록한 이메일로 발송됩니다.)",
+              "rows": {
+                "notification": {
+                  "title": "메시지 알림 수신여부"
+                },
+                "notificationChannels": {
+                  "title": "알림 채널 및 스케줄",
+                  "subcomponents": {
+                    "groupWareNote": {
+                      "title": "그룹웨어 쪽지",
+                      "select": {
+                        "placeholder": "알림 일정을 선택하십시오.",
+                        "options": [
+                          "15분 전",
+                          "30분 전",
+                          "1시간 전",
+                          "2시간 전",
+                          "3시간 전"
+                        ]
+                      }
+                    },
+                    "email": {
+                      "title": "이메일",
+                      "select": {
+                        "placeholder": "알림 일정을 선택하십시오.",
+                        "options": [
+                          "15분 전",
+                          "30분 전",
+                          "1시간 전",
+                          "2시간 전",
+                          "3시간 전"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "subUser": {
+          "title": "사용자 관리 설정",
+          "subSections": {
+            "add": {
+              "title": "서브 사용자 관리",
+              "note": "* 서브 사용자 추가/삭제 및 서브 사용자의 권한을 관리할 수 있습니다.",
+              "buttons": {
+                "delete": "지우다",
+                "add": "+ 하위 사용자 추가"
+              },
+              "tableColumnTitles": {
+                "select": "선택",
+                "id": "신분증",
+                "name": "이름",
+                "authority": "권한",
+                "registrationDate": "등록일",
+                "lastLoginDate": "마지막 로그인 일시"
+              },
+              "modal": {
+                "title": "서브사용자 추가",
+                "rows": {
+                  "name": "이름 *",
+                  "id": "신분증 *",
+                  "password": "비밀번호 *",
+                  "authority": "권한"
+                },
+                "required": "* - 입력란이 필요합니다"
+              },
+              "alerts": {
+                "delete": {
+                  "title": "이 사용자를 삭제 하시겠습니까?",
+                  "description": "한 번 완료하면 되돌릴 수 없습니다!"
+                }
+              },
+              "options": {
+                "id": "ID",
+                "name": "이름"
+              }
+            },
+            "actionLogs": {
+              "title": "사용자 액션 로그",
+              "note": "서브 사용자 추가/삭제 및 서브 사용자의 권한을 관리할 수 있습니다.",
+              "tableColumnTitles": {
+                "date": "데이트",
+                "ip": "IP 주소",
+                "id": "신분증",
+                "action": "동작"
+              },
+              "filters": {
+                "user": "사용자 ID",
+                "term": "기간",
+                "content": "내용",
+                "placeholders": {
+                  "user":"사용자 ID",
+                  "term": {
+                    "start": "스타트",
+                    "end": "종료"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "campaign": {
+          "title": "캠페인 관련 설정",
+          "subSections": {
+            "DSI": {
+              "title": "메시지 발송자 정보 등록",
+              "note": "* 캠페인 메시지 발송 시 사용되는 발송자 정보를 등록합니다.",
+              "inputs": {
+                "email": "이메일",
+                "name": "이름",
+                "image": {
+                  "upload": "업로드",
+                  "remove": "없애다"
+                }
+              }
+            },
+            "defaults": {
+              "title": "캠페인 기본설정",
+              "note": "* 캠페인 기본값 설정(신규 캠페인 생성 시 캠페인 매니저에 기본값으로 설정됩니다.)",
+              "infos": {
+                "shipping": {
+                  "label": "발송 타입 기본값 설정",
+                  "options": {
+                    "repeat": "반복",
+                    "immediately": "즉시"
+                  }
+                },
+                "timezone": {
+                  "label": "발송시간대 기본값 설정",
+                  "placeHolder": "발송시간대를 선택하세요.",
+                  "options": [
+                    "AM 08:00 ~ AM 11:00",
+                    "AM 11:00 ~ PM 02:00",
+                    "PM 02:00 ~ PM 05:00",
+                    "PM 05:00 ~ PM 08:00"
+                  ]
+                },
+                "approval": {
+                  "label": "메시지 발송 전 승인 기본값 설정",
+                  "options": {
+                    "automatic": "추가 승인 불필요",
+                    "manual": "확인 버튼을 한번 더 클릭해야 발송이 승인됨"
+                  }
+                },
+                "optimization": {
+                  "label": "캠페인 최적화 기본값 설정",
+                  "options": {
+                    "auto": "자동 설정 - 효율이 가장 높은 채널과 플랜에, 최적화 된 비율로 발송합니다.",
+                    "strong": "강한 프로모션 - 다양한 메시지를 여러 채널을 통해 강력하게 어필할 수 있도록 발송합니다",
+                    "manual": "수동 설정 - 직접 우선순위를 설정할 수 있습니다."
+                  },
+                  "manualSettings": {
+                    "channel": {
+                      "title": "채널 우선순위",
+                      "options": [
+                        "자동",
+                        "반응이 높은 순서",
+                        "컨버전이 높은 순서",
+                        "코스트가 낮은 순서",
+                        "..."
+                      ]
+                    },
+                    "plan": {
+                      "title": "플랜 우선순위",
+                      "options": [
+                        "자동",
+                        "컨버전이 높은 플랜 순서",
+                        "컨버전이 높고 코스트가 낮은 플랜 순서",
+                        "오디언스가 적은 플랜 순서",
+                        "오디언스가 많은 플랜 순서",
+                        "..."
+                      ]
+                    },
+                    "target": {
+                      "title": " 타겟 우선순위",
+                      "options": [
+                        "자동",
+                        "주문이 많은 순서",
+                        "최근에 로그인한 순서",
+                        "반응이 높은 순서",
+                        "..."
+                      ]
+                    },
+                    "succession": {
+                      "title": "연속해서 메시지를 발송",
+                      "allowed": "발송 허용",
+                      "prohibit": "허용하지 않음"
+                    },
+                    "duplicateChannel": {
+                      "title": "중복된 채널로 메시지 발송",
+                      "allowed": "발송 허용",
+                      "prohibit": "허용하지 않음"
+                    },
+                    "duplicatePlan": {
+                      "title": "중복된 플랜을 발송",
+                      "allowed": "발송 허용",
+                      "prohibit": "허용하지 않음"
+                    }
+                  }
+                }
+              },
+              "globalSettings": {
+                "note": "* 캠페인 글로벌 설정(설정이 전체 캠페인에 공통으로 적용됩니다.)",
+                "infos": {
+                  "recommended": {
+                    "title": "추천상품 갯수 최소값 설정",
+                    "description": "(개 보다 적으면 메시지를 발송하지 않음)"
+                  },
+                  "personalization": {
+                    "title": "추천상품 개인화 사용 여부",
+                    "options": {
+                      "used": "사용함",
+                      "unused": "사용안함"
+                    },
+                    "purchaseItems": {
+                      "title": "구매상품 제외/포함 옵션",
+                      "options": {
+                        "exclude": "이미 구매한 상품 제외",
+                        "include": "이미 구매한 상품만 포함"
+                      }
+                    }
+                  },
+                  "errorHandling": {
+                    "title": "발송 에러 발생 시 처리 설정",
+                    "options": {
+                      "retry": "발송 재시도",
+                      "notify": "즉시 중단 후 운영자에게 알림 메시지 발송"
+                    },
+                    "retry": {
+                      "title": "ㄴ메시지 발송 후",
+                      "description": "동안 다음 메시지 발송 안함"
+                    }
+                  }
+                }
+              }
+            },
+            "timezone": {
+              "title": "서비스 타임존 설정",
+              "note": "* 타임존 기준 시간에 따라 캠페인 메시지가 발송됩니다.",
+              "infos": {
+                "timezone": {
+                  "title": "타임존",
+                  "value": "(GMT+09:00) Seoul"
+                }
+              }
+            }
+          }
+        },
+        "service": {
+          "title": "서비스 정보",
+          "subSections": {
+            "version": {
+              "title": "서비스 버전 정보",
+              "infos": {
+                "version": "서비스 버전",
+                "start": "서비스 시작일",
+                "end": "서비스 종료일"
+              }
+            },
+            "mall": {
+              "title": "서비스 연동 몰정보",
+              "note": "* BTS와 연동된 쇼핑몰의 정보를 확인할 수 있습니다.",
+              "infos": {
+                "mallID": "몰아이디",
+                "mallName": "쇼핑몰 이름",
+                "mail": "대량메일 잔여량"
+              }
+            }
+          }
+        }
+      },
+      "tooltip": {
+        "title": "설정 툴팁",
+        "descriptions": [
+          "설정 툴팁"
+        ]
+      }
+    },
+    "login": {
+      "title": "로그인",
+      "subtitle1": "카페24 쇼핑몰센터 계정으로 로그인 하실 수 있습니다.",
+      "subtitle2": "카페24 사내 이용자의 경우, 그룹웨어 계정으로 로그인 해 주세요.",
+      "passwordplaceholder" : "암호",
+      "loginbtn": "로그인",
+      "forgotpassword": "아이디 나 비밀번호를 잊어 버리셨습니까?",
+      "modal": {
+        "title": "쇼핑몰 정보 확인",
+        "content1": "BST에 연결할 쇼핑몰을 선택하세요.\n현재 일부 쇼핑몰만 연결할 수 있습니다.",
+        "content2": "권한이 없는 경우 쇼핑몰 목록이 나타나지 않습니다.\n이 경우 BTS 운영팀으로 문의 바랍니다."
+      }
+    },
+    "DeliveryHistory" : {
+      "title" : "발송 내역",
+      "via" : {
+        "title":"채널",
+        "email" : "이메일",
+        "sms" : "SMS",
+        "push" : "푸시",
+        "kakaotalk" : "KakaoTalk"
+      },
+      "status" : {
+        "title":"상태",
+        "completed" : "완료",
+        "failure" : "실패"
+      },
+      "date" : {
+        "title": "날짜",
+        "placeholders": {
+          "start": "시작 일자",
+          "end": "종료 일자"
+        }
+      },
+      "modal" : {
+        "closebtn" : "취소",
+        "editbtn" : "캠페인 수정",
+        "deletebtn": {
+          "button": "이 캠페인을 삭제",
+          "title": "삭제?",
+          "subtitle": "정말로 이것을 삭제 하시겠습니까? 나중에 변경 사항을 되돌릴 수 없습니다."
+        },
+        "viewmore": "더보기",
+        "recentdelivery" : {
+          "title" : "최근 배송 내역",
+          "viewMore" : "더보기",
+          "menutitle" : "최근 배송 내역"
+        },
+        "plans" : {
+          "title" : "포함 된 계획",
+          "menutitle" : "포함 된 계획"
+        },
+        "budgetschedule" : {
+          "title" : "예산 및 일정",
+          "menutitle" : "예산 및 일정",
+          "dailybudget" : "일일 예산",
+          "deliverytype" : "배송 유형",
+          "startday" : "시작일",
+          "endday" : "종료일",
+          "timesegment" : "시간 세그먼트"
+        },
+        "optimization" : {
+          "title" : "최적화",
+          "menutitle" : "최적화",
+          "channelpriority" : "채널 우선 순위",
+          "planpriority" : "우선 순위 계획",
+          "targetpriority" : "목표 우선 순위",
+          "warn1" : "지난 1 일 동안 메시지를받은 잠재 고객에게 보내지 마십시오.",
+          "warn2" : "잠재 고객은이 캠페인 내 여러 계획의 모든 메시지를받을 수 있습니다.",
+          "warn3" : "청중은 여러 채널을 통해 동일한 메시지를 수신 할 수 있습니다."
+        }
+      },
+      "tablecolumns" : {
+        "via" : "채널",
+        "datetime" : "일자",
+        "campaignname" : "캠페인",
+        "status" : "상태",
+        "sent" : "발송 개수",
+        "received" : "전송 개수",
+        "amountspent" : "지출 금액",
+        "clickrate" : "클릭률",
+        "costperclick" : "클릭당 비용",
+        "conversionrate" : "전환율",
+        "costperconversion" : "전환 비용",
+        "detail" : "상세 보기",
+        "conversiondays": "평균 구매 전환일수"
+      }
+    },
+    "campaigns": {
+      "title": "캠페인",
+      "buttons": {
+        "refresh": "새롭게 하다",
+        "create": "몹시 떠들어 대다",
+        "stop": "중지",
+        "confirm": "확인하다",
+        "resume": "이력서",
+        "view": "전망",
+        "cancel": "취소",
+        "delivering": "전달",
+        "completed": "완료",
+        "confirmRequired": "필수 확인",
+        "stopped": "중지",
+        "campaign": "캠페인",
+        "plan": "계획",
+        "editCampaign": "캠페인 수정",
+        "deleteCampaign": "이 캠페인을 삭제",
+        "viewMore": "더보기",
+        "close": "닫기"
+      },
+      "sections": {
+        "campaignSummary": {
+          "scheduledMessage": {
+            "title": "예정된 메시지",
+            "email": "이메일",
+            "sms": "SMS",
+            "push": "푸시",
+            "friendTalk": "카카오 친구톡"
+          },
+          "possibleMessage": "가능한 메시지 수",
+          "timeline": "타임 라인",
+          "noCampaign": "캠페인 없음",
+          "charging": "충전하기"
+        },
+        "campaignList": {
+          "name": "이름",
+          "status": "지위",
+          "delivery": "발송",
+          "audience": "잠재 고객",
+          "budget": "예산",
+          "amountSpent": "지출 금액",
+          "ends": "종료",
+          "deliveryHistory": "배달 이력",
+          "emptyList": "아직 캠페인 또는 계획 데이터가 없습니다.",
+          "loadingList": "로드 중입니다. 잠시만 기다려주십시오 ..."
+        },
+        "campaignModal": {
+          "title": "캠페인 또는 계획 만들기",
+          "createCampaign": "캠페인 만들기",
+          "createPlan": "계획 만들기"
+        },
+        "deliveryHistoryModal": {
+          "recentDelivery": {
+            "title": "최근 배송 내역",
+            "deliveryHistoryTable": {
+              "via": "통하다",
+              "dateTime": "날짜 시간",
+              "status": "지위",
+              "sent": "보냄",
+              "received": "받았습니다"
+            }
+          },
+          "includedPlans": {
+            "title": "포함 된 계획"
+          },
+          "budgetSchedule": {
+            "title": "예산 및 일정",
+            "dailyBudget": "일일 예산",
+            "deliveryType": "배송 유형",
+            "startDay": "시작일",
+            "endDay": "종료일",
+            "timeSegment": "시간 세그먼트"
+          },
+          "optimization": {
+            "title": "최적화",
+            "subtitle": "수동 - 자신의 우선 순위를 설정할 수 있습니다",
+            "channel": "채널 우선 순위",
+            "plan": "우선 순위 계획",
+            "target": "목표 우선 순위",
+            "note1": "지난 1 일 동안 메시지를받은 잠재 고객에게 보내지 마십시오.",
+            "note2": "잠재 고객은이 캠페인 내 여러 계획의 모든 메시지를 수신 할 수 있습니다.",
+            "note3": "청중은 여러 채널을 통해 동일한 메시지를 수신 할 수 있습니다."
+          }
+        }
+      },
+      "commons": {
+        "done": "완료",
+        "expected": "예정"
+      }
+    },
+    "Plan": {
+      "pageHeader": "계획 관리자",
+      "backBtn": "뒤로",
+      "backMsg": "떠나시겠습니까?",
+      "duplicateBtn": "복제"
+    },
+    "Reports" : {
+      "title" : "리포트",
+      "overviews" : {
+        "title" : "내 쇼핑몰 주요 지표",
+        "visitors" : "방문자 수",
+        "newMembers" : "신규 회원",
+        "loginMembers" : "방문 회원",
+        "pageViews": "페이지뷰",
+        "tsr" : "매출액"
+      },
+      "performance" : {
+        "title" : "캠페인 성과",
+        "sentMessages" : "보낸 메시지",
+        "amountSpent" : "지출 금액",
+        "sellingProducts": "제품 판매",
+        "conversionRevenue": "전환 수익",
+        "roi": "ROI 투자 수익",
+        "openClickRateGraph" : "메시지 오픈율 / 클릭율",
+        "aveCostPerMessage": "메시지 당 평균 비용",
+        "aveClickThrough" : "평균 클릭률",
+        "aveConversion" : "평균 전환율"
+      },
+      "topCampaigns" : "상위 캠페인"
+    },
+    "campaignManager": {
+      "title" : "캠페인 관리자",
+      "duplicateBtn": "복제",
+      "backBtn": "<뒤로",
+      "saveBtn": "변경 사항을 저장하다",
+      "subTitle": "캠페인은 여러 플랜을 담는 폴더와 같은 역할을 합니다. \n 캠페인 단위로 발송 계획과 예산을 세우고 관리할 수 있습니다.",
+      "head": {
+        "title": "기본 사항",
+        "campaignName": "● 캠페인 이름",
+        "campaignNamePlaceHolder": "예) 신규 고객 활성화 캠페인",
+        "status": "● 지위"
+      },
+      "body1": {
+        "title": "포함된 플랜",
+        "createPlanBtn": "+ 계획 만들기",
+        "tableHeaders": {
+          "planName": "계획 이름",
+          "status": "지위",
+          "audience": "청중",
+          "amountSpent": "지출 금액"
+        }
+      },
+      "body2": {
+        "title": "예산 & 스케쥴",
+        "warning1": "주의!",
+        "warning2": " 이미 시작된 캠페인의 예산을 수정하면, 수정일부터 종료일까지 남은 기간을 기준으로 재계산하여 적용됩니다.",
+        "section1": {
+          "title": "● 예산",
+          "selectPlaceHolder":"하나를 골라주세요",
+          "budgetOptions": ["일일 예산","평생 예산"],
+          "numberPlaceHolder": "예) 15000"
+        },
+        "section2": {
+          "titleSpend1": "당신은 미래에 ",
+          "titleSpend2": " 까지 지출 할 것입니다",
+          "numberOfMessages": "이 예산으로 보낼 수 있는 메시지 건수는 다음과 같습니다.",
+          "tableHeaders": {
+            "channel": "채널",
+            "fee":"요금",
+            "possibleSend": "발송 가능 건수"
+          }
+        },
+        "section3": {
+          "title": "● 배송 유형",
+          "option1": "반복",
+          "option2": "한 번",
+          "tooltip": {
+            "title": "배송 유형",
+            "subtitle1": "반복",
+            "content1": "- 선택한 시작일~종료일에 걸쳐 메시지가 1일 1회 반복해서 발송됩니다. \n - 반복적인 안내, 프로모션 등을 자동으로 실행하는것에 적당한 타입입니다.",
+            "subtitle2": "한 번",
+            "content2": "- 선택한 시작일에 메시지가 1회 발송됩니다. \n - 단기적인 이벤트 또는 전송 테스트에 적당한 타입입니다."
+          }
+        },
+        "section4": {
+          "startDay": "● 시작일",
+          "endDay": "● 종료일"
+        },
+        "section5": {
+          "title": "● 시간 세그먼트",
+          "segmentPlaceHolder": "-시간 세그먼트를 선택하십시오-",
+          "tooltip": {
+            "title": "시간 세그먼트",
+            "content1": "-선택한 시간대에 메시지 발송이 \n 시작됩니다.",
+            "content2": "-지난 발송 내역을 분석하여, 응답율이 가장 \n 좋았던 시간대에 [추천] 이 표시됩니다."
+          }
+        },
+        "section6": {
+          "title": "● 메시지 발송 전 알림",
+          "option1": "알림 이메일 수신",
+          "option2": "알림 받지 않음",
+          "option1Options":
+          [
+            "15 분 전",
+            "30 분 전",
+            "1 시간 전",
+            "2 시간 전",
+            "3 시간 전"
+          ]
+        },
+        "section7": {
+          "title": "● 메시지 발송 전 승인",
+          "option1": "추가 승인 불필요",
+          "option2": "확인 버튼을 한번 더 클릭해야 발송이 승인됨"
+        }
+      },
+      "foot1": {
+        "title": "최적화",
+        "option1": "자동 - 가장 효율적인 채널 및 계획에 최적화 된 속도로 전송합니다.",
+        "option2": "강력한 프로모션 - 여러 채널에서 강력한 호소력을 발휘할 수 있도록 다양한 메시지를 보냅니다.",
+        "option3": "수동 - 직접 우선 순위를 선택하십시오.",
+        "manualMode": {
+          "channelPriority": "● 채널 우선 순위",
+          "channelPriorityOptions": [ "자동", "높은 응답율", "높은 전환율", "비용 채널"],
+          "planPriority": "● 계획 우선 순위",
+          "planPriorityOptions": [ "자동", "높은 전환율 계획", "높은 전환율 낮은 비용 계획", "몇몇 잠재 고객 계획", "많은 잠재 고객 계획"],
+          "targetPriority": "● 목표 우선 순위",
+          "targetPriorityOptions": [ "자동", "다수 주문", "최근 로그인", "높은 응답", "..."],
+          "manualOption1": {
+            "title": "● 연속해서 메시지를 발송",
+            "optionA": "발송 허용",
+            "optionB": "허용하지 않음"
+          },
+          "manualOption2": {
+            "title": "● 중복된 채널로 메시지 발송",
+            "optionA": "발송 허용",
+            "optionB": "허용하지 않음"
+          },
+          "manualOption3": {
+            "title": "● 중복된 플랜을 발송",
+            "optionA": "발송 허용",
+            "optionB": "허용하지 않음"
+          }
+        }
+      },
+      "foot2":{
+        "deleteBtn": "이 캠페인 삭제"
+      },
+      "confirms":{
+        "title": "떠나시겠습니까?",
+        "desc": "변경 사항이 손실됩니다.",
+        "errorTitle": "유효한 캠페인 정보를 입력하십시오",
+        "delete": {
+          "title": "이 캠페인을 삭제 하시겠습니까?",
+          "errorTitle": "삭제시 문제가 발생했습니다"
+        }
+    }
+    },
+    "template": {
+      "title": "템플릿 관리",
+      "items": {
+        "messsageTheme": {
+          "title": "메시지 테마",
+          "subTitle1": "메시지에서 사용될 테마를 설정합니다.",
+          "subTitle2": "플랜에서 메시지를 편집할 때 이 설정값을 기본적으로 불러옵니다.",
+          "inputLabel": {
+            "logo": "로고 이미지",
+            "fontStyle": "세례반",
+            "fontSize": "폰트 크기",
+            "textColor": "글자 색",
+            "buttonBackground": "버튼 배경색",
+            "buttonColor": "버튼 텍스트 색상",
+            "button": {
+              "save": "변경 사항을 저장하다"
+            }
+          }
+        },
+        "footerInformation": {
+          "title": "푸터 정보",
+          "subtitle1": "메시지 가장 하단 푸터 영역을 설정합니다.",
+          "subtitle2": "광고성 메시지를 발송할 때 의무적으로 지켜야하는 사항들을 포함하고 있습니다.",
+          "input": {
+            "label": {
+              "mallName": "쇼핑몰(회사) 이름",
+              "mallAddress": "주소",
+              "mallContact": "고객센터 연락처",
+              "unsubscribeText": "수신거부 안내 텍스트",
+              "additionalText": "추가 텍스트",
+              "snsLink": "SNS 링크"
+            },
+            "placeholder": {
+              "socialMedia": "URL을 입력하세요",
+              "mallName": "예) BTS 쇼핑몰",
+              "mallAddress": "예) 서울시 동작구 보라매로5길 15",
+              "mallContact": "예) 1588-3413",
+              "unsubscribeText": "예) 수신거부"
+            }
+          },
+          "socialMedia": {
+            "instagram": "인스타그램",
+            "facebook": "페이스북",
+            "youtube": "유튜브",
+            "blog": "블로그",
+            "kakaoTalkPlusFriend": "플러스친구",
+            "kakaoStory": "카카오스토리",
+            "band": "밴드",
+            "twitter": "트위터"
+          },
+          "button": {
+            "save": "변경 사항을 저장하다"
+          }
+        },
+        "messageVariables": {
+          "title": "메시지 변수",
+          "subTitle": "(메시지 변수 편집 기능은, 1차에서 제공하지 않음)"
+        }
+      }
+    },
+    "dashboard": {
+      "title": "대시보드",
+      "sections": {
+        "gettingStarted": {
+          "title": "시작하기",
+          "buttons": {
+            "createCampaign": "새 캠페인 만들기",
+            "createPlan": "새 플랜 만들기",
+            "editTemplate": "템플릿 편집",
+            "activeCampaign": "활성 캠페인"
+          }
+        },
+        "sentMessages": {
+          "title": "보낸 메시지"
+        },
+        "conversionRevenue": {
+          "title": "전환 매출액"
+        },
+        "news": {
+          "title": "공지사항",
+          "modal": {
+            "button": {
+              "listView": "목록 보기",
+              "close": "닫기"
+            }
+          }
+        },
+        "clickRate": {
+          "title": "클릭율"
+        },
+        "conversionRate": {
+          "title": "전환율"
+        },
+        "campaigns": {
+          "title": "캠페인",
+          "buttons": {
+            "create": "새로 만들기"
+          },
+          "empty": {
+            "statement": "아직 캠페인이 없습니다.",
+            "suggestion": "하나를 만들다."
+          }
+        },
+        "plans": {
+          "title": "플랜",
+          "buttons": {
+            "create": "새로 만들기"
+          },
+          "empty": {
+            "statement": "아직 계획이 없습니다.",
+            "suggestion": "하나를 만들다."
+          }
+        },
+        "support": {
+          "title": "서포트",
+          "type": {
+            "video": {
+              "title": "서비스 소개 영상"
+            },
+            "guide": {
+              "title": "이용 가이드"
+            },
+            "inquiry": {
+              "title": "문의 남기기",
+              "question": "BTS 서비스 이용에 궁금한 점이 있으신가요?",
+              "suggestion": "이용 가이드를 통해서도 해결하지 못하셨다면 앱 개발팀에게 이메일을 보내 주세요.",
+              "FAQs": {
+                "title": "자주 묻는 질문",
+                "FAQ1": "캠페인, 플랜이 뭔가요?",
+                "FAQ2": "메시지 발송 잔여 건수는 어떻게 늘리나요?",
+                "FAQ3": "발송 대기 중인 캠페인을 중단하고 싶어요"
+              },
+              "input": {
+                "name": {
+                  "title": "이름",
+                  "placeholder": "Please input your name."
+                },
+                "email": {
+                  "title": "이메일",
+                  "placeholder": "sample.email@domain.com"
+                },
+                "shopAddress": {
+                  "title": "쇼핑몰 주소",
+                  "placeholder": "https://www.shoppingmall.com"
+                },
+                "details": {
+                  "title": "내용",
+                  "placeholder": "Please input the details."
+                }
+              }
+            }
+          }
+        },
+        "recentActivity": {
+          "title": "최근 활동",
+          "activities": {
+            "createCampaign": "새 캠페인 만들기",
+            "deliverCampaign": "캠페인 제공",
+            "editPlan": "계획 수정"
+          }
+        }
+      }
+    }
+  },
+  "elements": {
+    "imageUpload": {
+      "uploadText": "업로드",
+      "removeText": "없애다",
+      "removeImage": {
+        "title": "이미지를 제거 하시겠습니까?",
+        "description": "선택된 이미지 제거"
+      }
+    },
+    "VTable": {
+      "searchPlaceholder": "검색",
+      "rowsPerPage": [
+        "페이지 당 10 행",
+        "페이지 당 20 행",
+        "페이지 당 50 행",
+        "1페이지 당 100 행"
+      ]
+    },
+    "Modal": {
+      "buttons": {
+        "close": "닫기",
+        "save": "저장"
+      }
+    }
+  },
+  "commons": {
+    "save": "저장하기"
+  }
+}

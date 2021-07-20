@@ -1,0 +1,17 @@
+.dropdown
+  .select-node
+    @apply cursor-pointer border rounded px-5 py-2 text-sm overflow-hidden
+    min-width: 8em
+
+  .item-wrapper
+    @apply absolute border mt-1 rounded bg-white z-40
+
+    .item-node
+      @apply px-6 py-3 cursor-pointer text-sm overflow-hidden
+      min-width: 7em
+
+      &:hover
+        @apply bg-gray-100
+
+      &:not(:last-child)
+        @apply border-b

@@ -1,0 +1,37 @@
+@import '@/assets/sss/primary.sss'
+@import '@/assets/sss/animate.sss'
+
+.column
+  @apply flex flex-col
+
+.main-menu-active
+  @apply text-white opacity-100
+  transform: scale(1.05)
+  box-sizing: border-box
+
+.sidenav
+  @apply column justify-between bg-primary z-10 whitespace-normal pb-2
+  width: 110px
+
+  div
+    @apply column
+
+    a
+      @apply px-2 py-3 mx-2 my-1 text-center
+
+      & .main-menu, & .more-menu
+        @apply text-gray-200 opacity-75 animated-ease-fast
+
+        &:hover
+          @apply main-menu-active
+
+      &.nuxt-link-active
+
+        & .text-xs
+          @apply hidden
+
+        & .main-menu, & .more-menu
+          @apply main-menu-active border-2 border-white rounded-lg py-3
+
+.material-design-icon
+  @apply text-2xl mb-2

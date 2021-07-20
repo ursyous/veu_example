@@ -1,0 +1,32 @@
+﻿.text
+  &-link
+    @apply cursor-pointer
+
+    &:hover
+      @apply underline
+    
+  &-page-title
+    @apply font-bold
+
+  &-panel-title
+    @apply text-xl font-bold
+  
+  &-section-title
+    @apply text-base font-bold
+  
+  &-item-title
+    @apply text-base font-medium
+
+@screen lg
+  .text
+    &-page-title
+      @apply text-xl
+    &-content-item
+      @apply font-medium
+
+@screen xl
+  .text
+    &-page-title
+      @apply text-2xl
+    &-content-item
+      @apply font-bold

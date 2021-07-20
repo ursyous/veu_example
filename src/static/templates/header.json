@@ -1,0 +1,26 @@
+{
+  "locales": [
+    {
+      "code": "ko",
+      "text": "layouts.header.locale.ko"
+    },
+    {
+      "code": "en",
+      "text": "layouts.header.locale.en"
+    }
+  ],
+  "profileDropdown": [
+    {
+      "text": "layouts.header.profile.settings",
+      "link": "/settings"
+    },
+    {
+      "text": "layouts.header.profile.help",
+      "link": "/help"
+    },
+    {
+      "text": "layouts.header.profile.logout",
+      "link": "/main"
+    }
+  ]
+}

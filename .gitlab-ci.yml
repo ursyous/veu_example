@@ -1,0 +1,9 @@
+variables:
+  app: bts-web
+  group: bi
+  cluster: sre-01
+  type: node
+  
+include:
+  - project: 'devops/build'
+    file: '.gitlab-build-ci.yml'

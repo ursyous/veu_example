@@ -1,0 +1,46 @@
+{
+  "menus" : [
+    {
+      "icon": "ChartBarIcon",
+      "text": "layouts.leftPanel.mainMenu.dashboard",
+      "link": "/dashboard",
+      "position": "top"
+    },
+    {
+      "icon": "WrenchIcon",
+      "text": "layouts.leftPanel.mainMenu.campaigns",
+      "link": "/campaigns",
+      "position": "top"
+    },
+    {
+      "icon": "FileChartIcon",
+      "text": "layouts.leftPanel.mainMenu.report",
+      "link": "/reports",
+      "position": "top"
+    },
+    {
+      "icon": "BorderNoneIcon",
+      "text": "layouts.leftPanel.mainMenu.template",
+      "link": "/template",
+      "position": "top"
+    },
+    {
+      "icon": "History",
+      "text": "layouts.leftPanel.mainMenu.deliveryHistory",
+      "link": "/deliveryHistory",
+      "position": "top"
+    },
+    {
+      "icon": "SettingsIcon",
+      "text": "layouts.leftPanel.moreMenu.settings",
+      "link": "/settings",
+      "position": "bottom"
+    },
+    {
+      "icon": "HelpCircleOutlineIcon",
+      "text": "layouts.leftPanel.moreMenu.help",
+      "link": "/help",
+      "position": "bottom"
+    }
+  ]
+}

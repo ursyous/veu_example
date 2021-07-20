@@ -1,0 +1,57 @@
+{
+  "data": {
+    "addSubUser": {
+      "rows": [
+        {
+          "id": "sub_user1",
+          "name": "서브사용자1",
+          "authority": "권한/권한/권한/권한",
+          "registrationDate": "YYYY-MM-DD",
+          "lastLoginDate": "YYYY-MM-DD hh:mm"
+        },
+        {
+          "id": "sub_user2",
+          "name": "서브사용자2",
+          "authority": "권한/권한/권한/권한",
+          "registrationDate": "YYYY-MM-DD",
+          "lastLoginDate": "YYYY-MM-DD hh:mm"
+        },
+        {
+          "id": "sub_user3",
+          "name": "John Doe",
+          "authority": "권한/권한/권한/권한",
+          "registrationDate": "YYYY-MM-DD",
+          "lastLoginDate": "YYYY-MM-DD hh:mm"
+        },
+        {
+          "id": "sub_user4",
+          "name": "Edgar Allan Poe",
+          "authority": "권한/권한/권한/권한",
+          "registrationDate": "YYYY-MM-DD",
+          "lastLoginDate": "YYYY-MM-DD hh:mm"
+        },
+        {
+          "id": "sub_user5",
+          "name": "Paul Jackson Pollock",
+          "authority": "권한/권한/권한/권한",
+          "registrationDate": "YYYY-MM-DD",
+          "lastLoginDate": "YYYY-MM-DD hh:mm"
+        },
+        {
+          "id": "sub_user6",
+          "name": "Yuri Gagarin",
+          "authority": "권한/권한/권한/권한",
+          "registrationDate": "YYYY-MM-DD",
+          "lastLoginDate": "YYYY-MM-DD hh:mm"
+        },
+        {
+          "id": "sub_user7",
+          "name": "Neil Armstrong",
+          "authority": "권한/권한/권한/권한",
+          "registrationDate": "YYYY-MM-DD",
+          "lastLoginDate": "YYYY-MM-DD hh:mm"
+        }
+      ]
+    }
+  }
+}

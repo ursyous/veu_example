@@ -1,0 +1,60 @@
+﻿@import '@/assets/sss/primary.sss'
+.tab-list *
+  transition: all 0.1s ease-in
+.tab-content-container
+  @apply bg-gray-200 shadow-lg z-10
+  min-width: 10em
+.tab-title-container
+  min-width: 5em
+.tab-title
+  @apply shadow-lg
+
+/* Default */
+.tab-list .tab-title
+  @apply bg-gray-300 text-black
+.tab-list .tab-title:hover
+  @apply bg-gray-400
+.tab-list .tab-title.active
+  @apply bg-gray-600 !important text-white
+
+/* Side */
+.tab-list.side
+  @apply inline-flex w-full
+.tab-list.side .tab-title-container
+  @apply w-1/6
+.tab-list.side .tab-content-container
+  @apply w-5/6 border-l rounded-b-lg rounded-tr-lg overflow-hidden
+.tab-list.side .tab-title-container div
+  @apply rounded-l-lg
+
+/* Top */
+.tab-list.top
+  @apply inline-block w-full
+.tab-list.top .tab-title-container
+  @apply flex
+.tab-list.top .tab-content-container
+  @apply rounded-b-lg rounded-tr-lg overflow-hidden
+  transform: translateY(-1px)
+.tab-list.top .tab-title-container div
+  @apply rounded-t-lg
+
+
+/* Primary */
+.tab-list.primary .tab-title
+  @apply bg-primary text-white
+.tab-list.primary .tab-title.active
+  @apply bg-gray-100 !important text-primary
+
+/* Side */
+.tab-list.primary.side
+  @apply inline-flex w-full
+.tab-list.primary.side .tab-title-container .tab-title.active
+  @apply border border-primary
+
+/* Top */
+.tab-list.primary.top
+  @apply inline-block w-full
+.tab-list.primary.top .tab-title
+  @apply flex
+.tab-list.primary.top .tab-title-container .tab-title.active
+  @apply border-t border-primary

@@ -1,0 +1,26 @@
+﻿
+.numeric-input-container
+  @apply flex flex-row rounded-lg
+  box-shadow: 0px 0px 4px -3px black
+  .numeric-input.stepper
+    @apply w-8/12 h-full  text-base p-2 rounded-lg outline-none
+    z-index: 99
+  .numeric-input:not(.stepper)
+    @apply w-full h-full  text-base rounded-lg outline-none
+    z-index: 99
+  .numeric-input.left
+    @apply text-left
+  .numeric-input.center
+    @apply text-center
+  .numeric-input.right
+    @apply text-right
+
+
+  .step-buttons
+    @apply w-2/12 border-none bg-gray-300 text-gray-800 font-bold py-2 px-4 outline-none text-base
+    text-align: center
+
+  .step-buttons.max
+    @apply rounded-r-lg rounded-l-none
+  .step-buttons.min
+    @apply rounded-l-lg rounded-r-none

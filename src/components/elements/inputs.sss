@@ -1,0 +1,147 @@
+.bg-primary
+  background-color: #5A67D8
+
+.border-primary
+  border-color: #5A67D8
+
+.text-primary
+  color: #5A67D8
+
+.checkbox
+  @apply relative cursor-pointer my-2
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  max-width: max-content
+  min-width: 100px
+
+.checkbox input
+  @apply absolute opacity-0 cursor-pointer
+
+.checkbox .checkmark
+  @apply inline-block top-0 left-0 border border-gray-500
+  height: 20px
+  width: 20px
+  transition: background .125s ease-in-out
+
+.checkbox > div
+  @apply inline-block overflow-hidden whitespace-no-wrap pl-3
+  text-overflow: ellipsis
+  max-width: 200px
+  text-overflow: ellipsis
+
+.checkbox input:checked ~ .checkmark
+  @apply bg-gray-500
+
+.checkbox .checkmark:after
+  @apply hidden
+  content: ""
+
+.checkbox input:checked ~ .checkmark:after
+  @apply block
+
+.checkbox .checkmark:after
+  @apply relative border-solid border-white
+  left: 5px
+  width: 8px
+  height: 14px
+  border-width: 0 3px 3px 0
+  -webkit-transform: rotate(45deg)
+  -ms-transform: rotate(45deg)
+  transform: rotate(45deg)
+
+.checkbox.primary .checkmark
+  @apply border-primary
+
+.checkbox.primary input:checked ~ .checkmark
+  @apply bg-primary
+
+.checkbox.success .checkmark
+  @apply border-green-500
+
+.checkbox.success input:checked ~ .checkmark
+  @apply bg-green-500
+
+.checkbox.warning .checkmark
+  @apply border-yellow-600
+
+.checkbox.warning input:checked ~ .checkmark
+  @apply bg-yellow-600
+
+.checkbox.danger .checkmark
+  @apply border-red-800
+
+.checkbox.danger input:checked ~ .checkmark
+  @apply bg-red-800
+
+.radio
+  @apply relative flex flex-col justify-center w-full h-8
+  max-width: max-content
+  min-width: 100px
+
+.radio input[type=radio]
+  @apply hidden
+
+.radio label
+  @apply relative w-full pl-8 cursor-pointer
+  z-index: 2
+  width: max-content
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+  display: inline-block
+  max-width: 200px
+  -webkit-transition: all 0.25s linear
+
+.radio .check
+  @apply absolute rounded-full h-5 w-5 border border-solid border-gray-700
+  z-index: 1
+  top: 50%
+  transform: translateY(-50%)
+  transition: border .1s linear
+  -webkit-transition: border .1s linear
+
+.radio:hover .check
+  @apply border-4
+
+.radio .check::before
+  @apply block absolute rounded-full
+  content: ''
+  height: 60%
+  width: 60%
+  top: 55%
+  left: 55%
+  margin: -35% 0 0 -35%
+  transition: background 0.1s linear
+  -webkit-transition: background 0.1s linear
+
+.radio input[type=radio]:checked ~ .check
+  @apply border-2
+
+.radio input[type=radio]:checked ~ .check::before
+  @apply bg-gray-700
+
+.radio.primary .check
+  @apply border-primary
+
+.radio.primary input[type=radio]:checked ~ .check::before
+  @apply bg-primary
+
+.radio.success .check
+  @apply border-green-500
+
+.radio.success input[type=radio]:checked ~ .check::before
+  @apply bg-green-500
+
+.radio.warning .check
+  @apply border-yellow-600
+
+.radio.warning input[type=radio]:checked ~ .check::before
+  @apply bg-yellow-600
+
+.radio.danger .check
+  @apply border-red-800
+
+.radio.danger input[type=radio]:checked ~ .check::before
+  @apply bg-red-800

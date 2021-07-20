@@ -1,0 +1,63 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true, //Workaround for ElementUI conflict
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "rootDirs": [ "src" ],
+    "outDir": "build/lib",
+    "jsx": "preserve",
+    "lib": [
+      "esnext",
+      "esnext.asynciterable",
+      "dom"
+    ],
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "allowJs": true,
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noEmit": true,
+    "importHelpers": true,
+    "baseUrl": "src",
+    "paths": {
+      "~/*": ["./*"],
+      "@/*": ["./*"]
+    },
+    "noImplicitReturns": true,
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "emitDecoratorMetadata": true,
+    "noUnusedLocals": true,
+    "declaration": true,
+    "pretty": true,
+    "resolveJsonModule": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "newLine": "LF",
+    "removeComments": true,
+    "types": [
+      "@types/node",
+      "@types/jest",
+      "@nuxt/types"
+    ],
+    "typeRoots": [
+        "./node_modules/@types",
+        "./types/",
+    ]
+  },
+  "include": [
+    "./nuxt.config.ts",
+    "src/**/*.vue",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "**/*.spec.ts"
+  ]
+}

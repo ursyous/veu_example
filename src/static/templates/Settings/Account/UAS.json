@@ -1,0 +1,154 @@
+{
+  "dataUI": {
+    "component": "div",
+    "properties": {
+      "class": "settings-content"
+    },
+    "subcomponents": [
+      {
+        "component": "div",
+        "properties": {
+          "class": "w-full flex flex-row pb-2 px-1"
+        },
+        "subcomponents": [
+          {
+            "component": "span",
+            "properties": {
+              "class": "font-semibold text-2xl w-3/4",
+              "domProps": {
+                "innerHTML": "t:pages.settings.sections.accountSettings.subSections.user.title"
+              }
+            }
+          },
+          {
+            "component": "div",
+            "properties": {
+              "class": "w-1/4 text-right"
+            },
+            "subcomponents": [
+              {
+                "component": "Button",
+                "events": {
+                  "click": "confirmSave"
+                },
+                "properties": {
+                  "class": "btn-solid-secondary"
+                },
+                "subcomponents": [
+                  {
+                    "component": "span",
+                    "properties": {
+                      "domProps": {
+                        "innerHTML": "t:pages.settings.saveButtonText"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "component": "hr",
+        "properties": {
+          "class": "w-full border-b border-gray-400 mt-2"
+        }
+      },
+      {
+        "component": "div",
+        "properties": {
+          "class": "flex flex-col p-2 w-full"
+        },
+        "data": "userAccountSettings",
+        "subcomponents": [
+          {
+            "component": "info",
+            "properties": {
+              "class": "no-wrap",
+              "props": {
+                "title": "pages.settings.sections.accountSettings.subSections.user.rows.name.title",
+                "info": {
+                  "type": "text",
+                  "value": "::name"
+                }
+              }
+            }
+          },
+          {
+            "component": "info",
+            "properties": {
+              "class": "no-wrap",
+              "props": {
+                "title": "pages.settings.sections.accountSettings.subSections.user.rows.id.title",
+                "info": {
+                  "type": "text",
+                  "value": "::id"
+                }
+              }
+            }
+          },
+          {
+            "component": "info",
+            "properties": {
+              "class": "no-wrap",
+              "props": {
+                "title": "pages.settings.sections.accountSettings.subSections.user.rows.email.title",
+                "info": {
+                  "type": "input",
+                  "inputType": "email",
+                  "placeholder": "::email"
+                }
+              }
+            }
+          },
+          {
+            "component": "info",
+            "properties": {
+              "class": "no-wrap",
+              "props": {
+                "title": "pages.settings.sections.accountSettings.subSections.user.rows.phone.title"
+              }
+            },
+            "subcomponents": [
+              {
+                "component": "NumericInput",
+                "properties": {
+                  "class": "border-rounded p-1 w-64",
+                  "attrs": {
+                    "placeholder": "::phone"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "component": "info",
+            "properties": {
+              "class": "no-wrap",
+              "props": {
+                "title": "pages.settings.sections.accountSettings.subSections.user.rows.photo.title"
+              }
+            },
+            "subcomponents": [
+              {
+                "component": "ImageUpload",
+                "vmodel": "selectedImage",
+                "properties": {
+                  "class": "border border-gray-600 xl:w-1/6 sm:w-40 rounded",
+                  "props": {
+                    "editText": "elements.imageUpload.uploadText",
+                    "removeText": "elements.imageUpload.removeText"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "variables": {
+    "selectedImage": "/logo.png"
+  }
+}

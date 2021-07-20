@@ -1,0 +1,368 @@
+{
+  "dataUI": {
+    "component": "div",
+    "properties": {
+      "class": "settings-content"
+    },
+    "subcomponents": [
+      {
+        "component": "div",
+        "properties": {
+          "class": "w-full flex flex-row pb-2 px-1"
+        },
+        "subcomponents": [
+          {
+            "component": "span",
+            "properties": {
+              "class": "font-semibold text-2xl w-3/4",
+              "domProps": {
+                "innerHTML": "t:pages.settings.sections.subUser.subSections.add.title"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "component": "hr",
+        "properties": {
+          "class": "w-full border-b border-gray-400 mt-2"
+        }
+      },
+      {
+        "component": "i",
+        "properties": {
+          "class": "text-xs text-gray-700",
+          "domProps": {
+            "innerHTML": "t:pages.settings.sections.subUser.subSections.add.note"
+          }
+        }
+      },
+      {
+        "component": "div",
+        "properties": {
+          "class": "flex flex-col mt-4 p-2 w-full"
+        },
+        "data": "addSubUser",
+        "subcomponents": [
+          {
+            "component": "div",
+            "properties": {
+              "class": "flex flex-row w-full px-2 py-4 bg-gray-200"
+            },
+            "data": "actionLogs",
+            "subcomponents": [
+              {
+                "component": "v-select",
+                "vmodel": "advancedFilter.colSearch.column",
+                  "properties": {
+                    "class": "bg-white style-chooser w-24",
+                    "props": {
+                      "clearable": false,
+                      "label": "label",
+                      "placeholder": " - ",
+                      "options": [
+                        {
+                          "label": "t:pages.settings.sections.subUser.subSections.add.options.id",
+                          "value": "id"
+                        },
+                        {
+                          "label": "t:pages.settings.sections.subUser.subSections.add.options.name",
+                          "value": "name"
+                        }
+                      ]
+                    }
+                  }
+              },
+              {
+                "component": "input",
+                "vmodel":"advancedFilter.colSearch.searchText",
+                "properties": {
+                  "class": "ml-5 px-2 w-64 border border-gray-500"
+                }
+              }
+            ]
+          },
+          {
+            "component": "div",
+            "properties": {
+              "class": "row justify-between mt-5"
+            },
+            "subcomponents": [
+              {
+                "component": "Button",
+                "events": {
+                  "click": "deleteSubUser"
+                },
+                "properties": {
+                  "class": "btn-outline-secondary",
+                  "props": {
+                    "title": "pages.settings.sections.subUser.subSections.add.buttons.delete",
+                    "solid": true
+                  }
+                }
+              },
+              {
+                "component": "Button",
+                "events": {
+                  "click": "isModalShown"
+                },
+                "properties": {
+                  "class": "btn-solid-secondary",
+                  "props": {
+                    "title": "pages.settings.sections.subUser.subSections.add.buttons.add",
+                    "color": "primary",
+                    "solid": true
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "component": "DataTable",
+            "properties": {
+              "scopedSlots": {
+                "id": {
+                  "component": {
+                    "component": "a",
+                    "events": {
+                      "click": "isModalShown"
+                    },
+                    "properties": {
+                      "class": "text-blue-600 cursor-pointer hover:underline"
+                    }
+                  },
+                  "scope": {
+                    "data": "data",
+                    "location": "properties.domProps.innerHTML"
+                  }
+                }
+              },
+              "props": {
+                "selectionCol": true,
+                "tableData": "::rows",
+                "advancedFilter": "~advancedFilter",
+                "advancedFilterFunction": {
+                  "colSearch": "f:colSearch"
+                },
+                "columnDefinition": [
+                  {
+                    "src": "id",
+                    "label": "t:pages.settings.sections.subUser.subSections.add.tableColumnTitles.id"
+                  },
+                  {
+                    "src": "name",
+                    "label": "t:pages.settings.sections.subUser.subSections.add.tableColumnTitles.name"
+                  },
+                  {
+                    "src": "authority",
+                    "label": "t:pages.settings.sections.subUser.subSections.add.tableColumnTitles.authority"
+                  },
+                  {
+                    "src": "registrationDate",
+                    "label": "t:pages.settings.sections.subUser.subSections.add.tableColumnTitles.registrationDate"
+                  },
+                  {
+                    "src": "lastLoginDate",
+                    "label": "t:pages.settings.sections.subUser.subSections.add.tableColumnTitles.lastLoginDate"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "component": "Modal",
+            "properties": {
+              "props": {
+                "dynamicProps": {
+                  "isModalShown": "~isModalShown"
+                },
+                "conditionalClass": [
+                  {
+                    "name": "hidden",
+                    "reference": "isModalShown",
+                    "operator": "===",
+                    "value": false
+                  }
+                ]
+              }
+            },
+            "subcomponents": [
+              {
+                "component": "div",
+                "properties": {
+                  "class": "modal-header",
+                  "slot": "modal-header"
+                },
+                "subcomponents": [{
+                  "component": "h1",
+                  "properties": {
+                    "domProps": {
+                      "innerHTML": "t:pages.settings.sections.subUser.subSections.add.modal.title"
+                    }
+                  }
+                }]
+              },
+              {
+                "component": "div",
+                "properties": {
+                  "class": "modal-content",
+                  "slot": "modal-content"
+                },
+                "subcomponents": [
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "pages.settings.sections.subUser.subSections.add.modal.rows.name",
+                        "info": {
+                          "type": "input"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "pages.settings.sections.subUser.subSections.add.modal.rows.id",
+                        "info": {
+                          "type": "input"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "pages.settings.sections.subUser.subSections.add.modal.rows.password",
+                        "info": {
+                          "type": "input"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "props": {
+                        "title": "pages.settings.sections.subUser.subSections.add.modal.rows.authority"
+                      }
+                    },
+                    "subcomponents": [
+                      {
+                        "component": "div",
+                        "properties": {
+                          "class": "flex flex-col"
+                        },
+                        "subcomponents": [
+                          {
+                            "component": "Checkbox",
+                            "properties": {
+                              "props": {
+                                "label": "pages.settings.sections.subUser.subSections.add.modal.rows.authority",
+                                "color": "primary"
+                              }
+                            }
+                          },
+                          {
+                            "component": "Checkbox",
+                            "properties": {
+                              "props": {
+                                "label": "pages.settings.sections.subUser.subSections.add.modal.rows.authority",
+                                "color": "primary"
+                              }
+                            }
+                          },
+                          {
+                            "component": "Checkbox",
+                            "properties": {
+                              "props": {
+                                "label": "pages.settings.sections.subUser.subSections.add.modal.rows.authority",
+                                "color": "primary"
+                              }
+                            }
+                          },
+                          {
+                            "component": "Checkbox",
+                            "properties": {
+                              "props": {
+                                "label": "pages.settings.sections.subUser.subSections.add.modal.rows.authority",
+                                "color": "primary"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "component": "div",
+                "properties": {
+                  "class": "modal-footer",
+                  "slot": "modal-footer"
+                },
+                "subcomponents": [
+                  {
+                    "component": "div",
+                    "properties": {
+                      "class": "float-left text-xs text-red-400 mt-3 italic",
+                      "domProps": {
+                        "innerHTML": "t:pages.settings.sections.subUser.subSections.add.modal.required"
+                      }
+                    }
+                  },
+                  {
+                    "component": "div",
+                    "properties": {
+                      "class": "float-right"
+                    },
+                    "subcomponents": [
+                      {
+                        "component": "Button",
+                        "events": {
+                          "click": "isModalShown"
+                        },
+                        "properties": {
+                          "class": "mr-1 btn-outline-secondary",
+                          "props": {
+                            "title": "elements.Modal.buttons.close"
+                          }
+                        }
+                      },
+                      {
+                        "component": "Button",
+                        "events": {
+                          "click": "saveSubUser"
+                        },
+                        "properties": {
+                          "class": "ml-1 btn-solid-secondary",
+                          "props": {
+                            "title": "elements.Modal.buttons.save",
+                            "color": "primary",
+                            "solid": true
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "variables": {
+    "isModalShown": false,
+    "advancedFilter": {
+      "colSearch": {
+        "column": null,
+        "searchText": null
+      }
+    }
+  }
+}

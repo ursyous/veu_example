@@ -1,0 +1,285 @@
+{
+  "dataUI": {
+    "component": "client-only",
+    "properties": {},
+    "subcomponents": [
+      {
+        "component": "div",
+        "properties": {
+          "class": "settings-content"
+        },
+        "subcomponents": [
+          {
+            "component": "div",
+            "properties": {
+              "class": "w-full flex flex-row pb-2 px-1"
+            },
+            "subcomponents": [
+              {
+                "component": "span",
+                "properties": {
+                  "class": "font-semibold text-2xl w-3/4",
+                  "domProps": {
+                    "innerHTML": "t:pages.settings.sections.subUser.subSections.actionLogs.title"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "component": "hr",
+            "properties": {
+              "class": "w-full border-b border-gray-400 mt-2 mb-5"
+            }
+          },
+          {
+            "component": "div",
+            "properties": {
+              "class": "w-full p-2"
+            },
+            "data": "actionLogs",
+            "subcomponents": [
+              {
+                "component": "div",
+                "properties": {
+                  "class": "flex flex-col w-full px-2 py-4 bg-gray-200"
+                },
+                "subcomponents": [
+                  {
+                    "component": "info",
+                    "properties": {
+                      "class": "no-wrap",
+                      "props": {
+                        "title": "t:pages.settings.sections.subUser.subSections.actionLogs.filters.user"
+                      }
+                    },
+                    "subcomponents": [
+                      {
+                        "component": "v-select",
+                        "vmodel": "advancedFilter.userID",
+                        "properties": {
+                          "class": "bg-white rounded-none style-chooser",
+                          "style": {
+                            "width": "200px"
+                          },
+                          "props": {
+                            "clearable": true,
+                            "placeholder": "t:pages.settings.sections.subUser.subSections.actionLogs.filters.placeholders.user",
+                            "options": "::users",
+                            "searchable": false
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "class": "no-wrap",
+                      "props": {
+                        "title": "t:pages.settings.sections.subUser.subSections.actionLogs.filters.term"
+                      }
+                    },
+                    "subcomponents": [
+                      {
+                        "component": "v-date-picker",
+                        "vmodel": "advancedFilter.date.from",
+                        "properties": {
+                          "class": "border border-gray-500",
+                          "props": {
+                            "masks": { "data": "YYYY/MM/DD" },
+                            "popover": {
+                              "placement": "bottom",
+                              "visibility": "click"
+                            }
+                          }
+                        },
+                        "subcomponents": [
+                          {
+                            "component": "div",
+                            "properties": {
+                              "class": "flex flex-row bg-white"
+                            },
+                            "subcomponents": [
+                              {
+                                "component": "div",
+                                "properties": {
+                                  "class": "p-2 w-10 focus:outline-none border-r border-gray-500 text-center"
+                                },
+                                "subcomponents": [
+                                  {
+                                    "component": "font-awesome-icon",
+                                    "properties": {
+                                      "class": "icon",
+                                      "props": {
+                                        "icon": "calendar"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "input",
+                                "events": {
+                                  "change": "formatDate"
+                                },
+                                "properties": {
+                                  "class": "p-2 w-24 cursor-pointer focus:outline-none flex-grow",
+                                  "domProps": {
+                                    "type": "text",
+                                    "placeholder": "t:pages.settings.sections.subUser.subSections.actionLogs.filters.placeholders.term.start",
+                                    "value": "~advancedFilter.date.from"
+                                  },
+                                  "attrs": {
+                                    "readonly": "readonly"
+                                  },
+                                  "ref": "date-display-from"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "component": "span",
+                        "properties": {
+                          "class": "mx-5 mt-2",
+                          "domProps": {
+                            "innerHTML": "&#126;"
+                          }
+                        }
+                      },
+                      {
+                        "component": "v-date-picker",
+                        "vmodel": "advancedFilter.date.to",
+                        "properties": {
+                          "class": "border border-gray-500"
+                        },
+                        "subcomponents": [
+                          {
+                            "component": "div",
+                            "properties": {
+                              "class": "flex flex-row bg-white"
+                            },
+                            "subcomponents": [
+                              {
+                                "component": "div",
+                                "properties": {
+                                  "class": "p-2 w-10 focus:outline-none border-r border-gray-500 text-center"
+                                },
+                                "subcomponents": [
+                                  {
+                                    "component": "font-awesome-icon",
+                                    "properties": {
+                                      "class": "icon",
+                                      "props": {
+                                        "icon": "calendar"
+                                      }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "component": "input",
+                                "properties": {
+                                  "class": "p-2 w-24 cursor-pointer focus:outline-none flex-grow",
+                                  "domProps": {
+                                    "type": "text",
+                                    "placeholder": "t:pages.settings.sections.subUser.subSections.actionLogs.filters.placeholders.term.end",
+                                    "value": "~advancedFilter.date.to"
+                                  },
+                                  "attrs": {
+                                    "readonly": "readonly"
+                                  },
+                                  "ref": "date-display-to"
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "component": "info",
+                    "properties": {
+                      "class": "no-wrap",
+                      "props": {
+                        "title": "t:pages.settings.sections.subUser.subSections.actionLogs.filters.content"
+                      }
+                    },
+                    "subcomponents": [
+                      {
+                        "component": "input",
+                        "vmodel": "advancedFilter.search",
+                        "properties": {
+                          "class": "border border-gray-500 px-2",
+                          "style": {
+                            "width": "325px"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "component": "div",
+            "properties": {
+              "class": "flex flex-col mt-8 p-2 w-full"
+            },
+            "data": "actionLogs",
+            "subcomponents": [
+              {
+                "component": "DataTable",
+                "properties": {
+                  "props": {
+                    "pagination": true,
+                    "tableData": "::rows",
+                    "selectRowCount": true,
+                    "advancedFilter": "~advancedFilter",
+                    "advancedFilterFunction": {
+                      "date": "f:filterByDate",
+                      "userID": "f:filterByUserId"
+                    },
+                    "columnDefinition": [
+                      {
+                        "src": "date",
+                        "label": "t:pages.settings.sections.subUser.subSections.actionLogs.tableColumnTitles.date"
+                      },
+                      {
+                        "src": "ipAddress",
+                        "label": "t:pages.settings.sections.subUser.subSections.actionLogs.tableColumnTitles.ip"
+                      },
+                      {
+                        "src": "id",
+                        "label": "t:pages.settings.sections.subUser.subSections.actionLogs.tableColumnTitles.id"
+                      },
+                      {
+                        "src": "action",
+                        "label": "t:pages.settings.sections.subUser.subSections.actionLogs.tableColumnTitles.action"
+                      }
+                    ]
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "variables": {
+    "searchTemp": "",
+    "advancedFilter": {
+      "search": "",
+      "userID": null,
+      "date": {
+        "from": null,
+        "to": null
+      }
+    }
+  }
+}
