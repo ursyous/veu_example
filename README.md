@@ -52,7 +52,3 @@ $ npm start
 > *  client: debugger-chrome
 > *  server: nuxt
 > *  fullstack: nuxt
-
-
-## Wiki
-https://wiki.simplexi.com/display/analysisteam/FE+%3A%3A+Boilerplate
